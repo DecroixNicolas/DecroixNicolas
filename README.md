@@ -79,8 +79,8 @@
 
     <!-- HERO -->
     <header>
-      <h1>Your Name</h1>
-      <div class="role">Frontend Developer | React, JavaScript, UI Design</div>
+      <h1>Nicolas Decroix</h1>
+      <div class="role">Diplomé Master II Géopolitique | Spécialisé OTAN , zones Flanc Est et Arctique</div>
       <p>
         I build fast, clean, and user-focused web applications.
       </p>
