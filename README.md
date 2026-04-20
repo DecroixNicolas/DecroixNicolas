@@ -80,7 +80,7 @@
     <!-- HERO -->
     <header>
       <h1>Nicolas Decroix</h1>
-      <div class="role">Diplomé Master II Géopolitique | Spécialisé Défense/OTAN | Sécurité du Flanc Est et de l'Arctique</div>
+      <div class="role">Diplomé Master II Géopolitique | Spécialisé Défense/OTAN | Sécurité Flanc Est et Arctique</div>
       <p>
         I build fast, clean, and user-focused web applications.
       </p>
@@ -157,10 +157,10 @@
 </body>
 </html>
 <!--
-theme: jekyll-theme-minimal
 git add .
 git commit -m "Mise à jour du code"
 git push origin main
+
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
