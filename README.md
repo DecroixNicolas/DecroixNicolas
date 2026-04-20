@@ -71,6 +71,31 @@
       margin-top: 60px;
       font-size: 14px;
     }
+    .memoire-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.pdf-section {
+  flex: 1;
+  min-width: 400px;
+}
+
+.images-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.images-section img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
   </style>
 </head>
 
