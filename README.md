@@ -17,6 +17,7 @@
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
       color: #e0e0e0;
       line-height: 1.8;
+      overflow-x: hidden;
     }
 
     .container {
@@ -35,6 +36,7 @@
       font-size: 48px;
       color: #00d4ff;
       margin-bottom: 10px;
+      letter-spacing: -1px;
     }
 
     .role {
@@ -42,6 +44,8 @@
       color: #ff6b9d;
       font-weight: 600;
       margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .intro-text {
@@ -66,19 +70,18 @@
       border-radius: 6px;
       font-weight: 600;
       font-size: 14px;
-      transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     .links a:hover {
       background: #ff6b9d;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
     }
 
     /* SECTIONS */
     .section {
-      margin-bottom: 60px;
+      margin-bottom: 80px;
     }
 
     h2 {
@@ -92,22 +95,21 @@
 
     /* PROJECT CARD */
     .project {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(0, 212, 255, 0.2);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 212, 255, 0.1);
       padding: 30px;
       margin-bottom: 30px;
-      border-radius: 10px;
-      transition: all 0.2s ease;
+      border-radius: 12px;
+      transition: all 0.3s ease;
     }
 
     .project:hover {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.06);
       border-color: #00d4ff;
-      transform: translateY(-2px);
     }
 
     .project-title {
-      font-size: 20px;
+      font-size: 22px;
       color: #00d4ff;
       margin-bottom: 12px;
       font-weight: 600;
@@ -135,24 +137,27 @@
       font-weight: 600;
     }
 
-    /* MEMOIRE */
+    /* MEMOIRE LAYOUT */
     .memoire-container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .pdf-section {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 15px;
+      background: #000;
+      padding: 10px;
       border-radius: 8px;
-      border: 1px solid rgba(0, 212, 255, 0.15);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      height: 450px;
     }
 
     .pdf-section iframe {
-      width: 100% !important;
-      border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 4px;
     }
 
     .images-section {
@@ -163,122 +168,61 @@
 
     .images-section img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid rgba(0, 212, 255, 0.2);
-      transition: all 0.2s ease;
-      cursor: pointer;
+      height: 135px; /* Hauteur fixe pour l'alignement */
+      object-fit: cover; /* Recadre proprement l'image */
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
     }
 
     .images-section img:hover {
-      border-color: #00d4ff;
-      transform: scale(1.02);
-    }
-
-    /* BUTTONS */
-    .project-links {
-      display: flex;
-      gap: 12px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .project-links a {
-      padding: 8px 16px;
-      background: rgba(0, 212, 255, 0.1);
-      border: 1px solid #00d4ff;
-      color: #00d4ff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 13px;
-      transition: all 0.2s ease;
-    }
-
-    .project-links a:hover {
-      background: #00d4ff;
-      color: #1a1a2e;
+      border-color: #ff6b9d;
+      transform: scale(1.05);
+      z-index: 5;
     }
 
     /* SKILLS GRID */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .skill-card {
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 107, 157, 0.3);
+      border-left: 3px solid #ff6b9d;
       padding: 20px;
-      border-radius: 8px;
-      transition: all 0.2s ease;
+      border-radius: 0 8px 8px 0;
+      transition: all 0.3s ease;
     }
 
     .skill-card:hover {
-      background: rgba(255, 107, 157, 0.1);
-      border-color: #ff6b9d;
-      transform: translateY(-2px);
+      background: rgba(255, 107, 157, 0.08);
+      transform: translateX(5px);
     }
 
     .skill-card strong {
-      color: #ff6b9d;
+      color: #00d4ff;
       display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    .skill-card {
-      font-size: 13px;
-      color: #b0b0b0;
+      margin-bottom: 5px;
     }
 
     /* FOOTER */
     footer {
-      margin-top: 60px;
-      padding-top: 30px;
-      border-top: 1px solid rgba(0, 212, 255, 0.2);
+      margin-top: 100px;
+      padding: 60px 0;
+      border-top: 1px solid rgba(0, 212, 255, 0.1);
       text-align: center;
-      color: #808080;
-      font-size: 13px;
-    }
-
-    footer a {
-      color: #00d4ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      .container {
-        padding: 40px 20px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      h2 {
-        font-size: 22px;
-      }
-
-      .memoire-container {
-        grid-template-columns: 1fr;
-      }
-
-      .links {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .links a {
-        width: 100%;
-        text-align: center;
-      }
+      .container { padding: 30px 20px; }
+      h1 { font-size: 36px; }
+      .memoire-container { grid-template-columns: 1fr; }
+      .pdf-section { height: 350px; }
+      .images-section { flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
+      .images-section img { width: 150px; flex-shrink: 0; }
     }
   </style>
 </head>
@@ -286,99 +230,80 @@
 <body>
   <div class="container">
 
-    <!-- HERO -->
     <header>
       <h1>Nicolas Decroix</h1>
       <div class="role">🌍 Master II Géopolitique | Défense & OTAN</div>
       <p class="intro-text">
-        Spécialiste en géopolitique de la défense avec expertise en stratégie OTAN, sécurité du flanc est et enjeux arctiques.
+        Spécialiste en géopolitique de la défense avec une expertise sur la stratégie de l'OTAN, la sécurité du flanc est européen et les enjeux géostratégiques en zone Arctique.
       </p>
 
       <div class="links">
         <a href="mailto:decroix.nicolasfrancois@gmail.com">📧 Email</a>
-        <a href="CV DECROIX Nicolas.pdf" target="_blank">📄 CV</a>
+        <a href="CV DECROIX Nicolas.pdf" target="_blank">📄 Mon CV</a>
         <a href="https://github.com/DecroixNicolas" target="_blank">💻 GitHub</a>
       </div>
     </header>
 
-    <!-- PROJECTS -->
-    <div class="section">
-      <h2>📚 Recherches</h2>
+    <div class="section" id="research">
+      <h2>📚 Travaux de Recherche</h2>
 
       <div class="project">
         <div class="project-title">Mémoire de Master 1</div>
         <p><strong>La Pologne et l'exclave de Kaliningrad : projet Bouclier Oriental et nouvelles réalités frontalières</strong></p>
+        
         <ul>
-          <li>Travail de recherche combinant <strong>études théoriques et collecte de sources ouvertes</strong></li>
-          <li><strong>Terrain d'un mois en Pologne</strong> : interviews avec maires, administrateurs régionaux et universitaires</li>
-          <li>Création de <strong>cartes originales</strong> pour illustrer les analyses géostratégiques</li>
-          <li><strong>Résultat : 120 pages, note 17/20</strong></li>
+          <li>Analyse géostratégique basée sur une collecte rigoureuse de <strong>sources ouvertes (OSINT)</strong>.</li>
+          <li><strong>Enquête de terrain :</strong> Un mois en Pologne, interviews d'élus, administrateurs et experts universitaires.</li>
+          <li>Conception de <strong>cartographies originales</strong> illustrant les dynamiques de défense frontalière.</li>
+          <li><strong>Distinction :</strong> Mémoire de 120 pages validé avec une note de <strong>17/20</strong>.</li>
         </ul>
 
         <div class="memoire-container">
           <div class="pdf-section">
-            <iframe src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview" height="350px"></iframe>
+            <iframe src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
           </div>
           <div class="images-section">
-            <img src="Carte-Nationale.jpg" alt="Carte nationale">
-            <img src="Carte-Région.png" alt="Carte Région">
-            <img src="Carte-Varmie.png" alt="Carte Varmie">
+            <img src="Carte-Nationale.jpg" alt="Cartographie Nationale">
+            <img src="Carte-Région.png" alt="Analyse Régionale">
+            <img src="Carte-Varmie.png" alt="Détail Varmie-Mazurie">
           </div>
         </div>
-
-        <div class="project-links">
-          <a href="#">Lire le mémoire</a>
-          <a href="#">Ressources</a>
-        </div>
       </div>
-
     </div>
 
-    <!-- SKILLS -->
     <div class="section">
-      <h2>🎯 Compétences</h2>
+      <h2>🎯 Domaines d'Expertise</h2>
       <div class="skills-grid">
         <div class="skill-card">
-          <strong>Géopolitique</strong>
-          Stratégie, analyse de conflits, relations internationales
+          <strong>Analyse Géopolitique</strong>
+          Stratégie militaire, analyse de conflits, relations internationales.
         </div>
         <div class="skill-card">
-          <strong>Défense</strong>
-          OTAN, stratégies de défense, sécurité européenne
-        </div>
-        <div class="skill-card">
-          <strong>Régions</strong>
-          Flanc Est, Arctique, Bassin méditerranéen
+          <strong>Défense Européenne</strong>
+          Architecture de sécurité de l'OTAN, Flanc Est, Arctique.
         </div>
         <div class="skill-card">
           <strong>Langues</strong>
-          Français, Anglais, Polonais
+          Français (maternel), Anglais (C1), Polonais (B2).
         </div>
         <div class="skill-card">
-          <strong>Outils</strong>
-          Cartographie, SIG, analyses qualitatives
-        </div>
-        <div class="skill-card">
-          <strong>Recherche</strong>
-          Rédaction académique, sources ouvertes
+          <strong>Méthodologie</strong>
+          Recherche académique, interviews de terrain, OSINT, Cartographie (SIG).
         </div>
       </div>
     </div>
 
-    <!-- ABOUT -->
     <div class="section">
       <h2>👤 À Propos</h2>
       <p>
-        Diplômé du Master II Géopolitique, je suis spécialisé dans l'analyse des enjeux de défense et de sécurité, particulièrement concernant l'OTAN et le flanc est européen. Ma recherche combine approche théorique rigoureuse et travail de terrain avec expérience d'interviews multilingues.
+        Diplômé de Master II, je me consacre à l'étude des rapports de force contemporains. Mon approche combine une analyse théorique approfondie et une réalité de terrain, me permettant d'apporter une perspective précise sur les enjeux de sécurité qui redéfinissent l'Europe actuelle.
       </p>
     </div>
 
-    <!-- CONTACT -->
     <footer>
-      <h2 style="border: none; display: block; margin-bottom: 20px; color: #00d4ff;">Contactez-moi</h2>
+      <h2 style="border: none; color: #00d4ff; margin-bottom: 10px;">Contact</h2>
       <p>📧 <strong>decroix.nicolasfrancois@gmail.com</strong></p>
-      <p>🔗 <a href="https://github.com/DecroixNicolas">GitHub</a></p>
-      <p style="margin-top: 20px;">© 2026 Nicolas Decroix</p>
+      <p style="margin-top: 25px; opacity: 0.6;">© 2026 Nicolas Decroix | Développé avec des notions de HTML/CSS</p>
     </footer>
 
   </div>
