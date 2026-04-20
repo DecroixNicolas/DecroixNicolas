@@ -6,6 +6,7 @@
   <title>Nicolas Decroix | Géopolitique & Défense</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* RESET PROPRE */
     * {
       margin: 0;
       padding: 0;
@@ -17,119 +18,122 @@
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
       color: #e0e0e0;
       line-height: 1.8;
-      overflow-x: hidden;
+      overflow-x: hidden; /* Empêche le scroll horizontal parasite */
     }
 
     .container {
-      max-width: 900px;
+      max-width: 940px; /* Légèrement élargi pour le confort visuel */
       margin: 0 auto;
       padding: 60px 40px;
     }
 
     /* HEADER */
     header {
-      margin-bottom: 60px;
+      margin-bottom: 70px;
       text-align: left;
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 52px;
       color: #00d4ff;
       margin-bottom: 10px;
-      letter-spacing: -1px;
+      letter-spacing: -1.5px;
+      font-weight: 700;
     }
 
     .role {
-      font-size: 16px;
+      font-size: 17px;
       color: #ff6b9d;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
     }
 
     .intro-text {
-      font-size: 15px;
+      font-size: 16px;
       color: #b0b0b0;
-      max-width: 600px;
-      margin-bottom: 25px;
+      max-width: 650px;
+      margin-bottom: 30px;
     }
 
-    /* LINKS */
+    /* BOUTONS DE LIENS PRINCIPAUX */
     .links {
       display: flex;
-      gap: 15px;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
     .links a {
-      padding: 10px 20px;
+      padding: 12px 24px;
       background: #00d4ff;
       color: #1a1a2e;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 212, 255, 0.2);
     }
 
     .links a:hover {
       background: #ff6b9d;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(255, 107, 157, 0.5);
     }
 
     /* SECTIONS */
     .section {
-      margin-bottom: 80px;
+      margin-bottom: 90px;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 30px;
       color: #00d4ff;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #ff6b9d;
-      padding-bottom: 10px;
+      margin-bottom: 35px;
+      border-bottom: 3px solid #ff6b9d;
+      padding-bottom: 12px;
       display: inline-block;
+      font-weight: 700;
     }
 
-    /* PROJECT CARD */
+    /* CARTE DE PROJET (RECHERCHES) */
     .project {
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(0, 212, 255, 0.1);
-      padding: 30px;
+      border: 1px solid rgba(0, 212, 255, 0.12);
+      padding: 35px;
       margin-bottom: 30px;
-      border-radius: 12px;
+      border-radius: 14px;
       transition: all 0.3s ease;
     }
 
     .project:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: #00d4ff;
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(0, 212, 255, 0.4);
     }
 
     .project-title {
-      font-size: 22px;
+      font-size: 24px;
       color: #00d4ff;
-      margin-bottom: 12px;
-      font-weight: 600;
+      margin-bottom: 15px;
+      font-weight: 700;
     }
 
     .project p {
       color: #b0b0b0;
-      margin-bottom: 15px;
-      font-size: 14px;
+      margin-bottom: 20px;
+      font-size: 15px;
     }
 
     ul {
-      padding-left: 20px;
-      margin-bottom: 20px;
+      padding-left: 22px;
+      margin-bottom: 25px;
     }
 
     li {
       color: #d0d0d0;
-      margin-bottom: 10px;
-      font-size: 14px;
+      margin-bottom: 12px;
+      font-size: 15px;
     }
 
     strong {
@@ -137,92 +141,141 @@
       font-weight: 600;
     }
 
-    /* MEMOIRE LAYOUT */
+    /* GRILLE DE LAYOUT DU MÉMOIRE */
     .memoire-container {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 20px;
-      margin-top: 25px;
+      grid-template-columns: 1.3fr 0.7fr; /* Plus d'espace pour le PDF */
+      gap: 25px;
+      margin-top: 30px;
     }
 
+    /* SECTION PDF (IFRAME) */
     .pdf-section {
-      background: #000;
-      padding: 10px;
-      border-radius: 8px;
+      background: #000; /* Fond noir pour le contraste du PDF */
+      padding: 8px;
+      border-radius: 10px;
       border: 1px solid rgba(0, 212, 255, 0.2);
-      height: 450px;
+      height: 500px; /* Hauteur généreuse pour la lecture */
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
     .pdf-section iframe {
       width: 100%;
       height: 100%;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
+    /* SECTION IMAGES (CARTES) */
     .images-section {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 15px;
+    }
+
+    /* Conteneur de lien pour chaque image cliquable */
+    .images-section a {
+      display: block;
+      width: 100%;
+      height: 155px; /* Aligné sur la grille PDF */
+      overflow: hidden; /* Empêche le débordement lors du zoom */
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      cursor: zoom-in; /* Indique que l'image est cliquable */
     }
 
     .images-section img {
       width: 100%;
-      height: 135px; /* Hauteur fixe pour l'alignement */
-      object-fit: cover; /* Recadre proprement l'image */
-      border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
+      height: 100%;
+      object-fit: cover; /* Recadre proprement sans déformer */
+      transition: transform 0.4s ease; /* Animation fluide du zoom */
     }
 
-    .images-section img:hover {
+    /* EFFETS AU SURVOL DES IMAGES */
+    .images-section a:hover {
       border-color: #ff6b9d;
-      transform: scale(1.05);
-      z-index: 5;
+      box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+      z-index: 2; /* Passe au-dessus des autres */
     }
 
-    /* SKILLS GRID */
+    .images-section a:hover img {
+      transform: scale(1.08); /* Léger effet de zoom dans le cadre */
+    }
+
+    /* SKILLS GRID (COMPÉTENCES) */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
     }
 
     .skill-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-left: 3px solid #ff6b9d;
-      padding: 20px;
-      border-radius: 0 8px 8px 0;
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 4px solid #ff6b9d;
+      padding: 25px;
+      border-radius: 0 10px 10px 0;
       transition: all 0.3s ease;
     }
 
     .skill-card:hover {
       background: rgba(255, 107, 157, 0.08);
-      transform: translateX(5px);
+      transform: translateX(8px);
     }
 
     .skill-card strong {
       color: #00d4ff;
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .skill-card span {
+      font-size: 14px;
+      color: #b0b0b0;
     }
 
     /* FOOTER */
     footer {
-      margin-top: 100px;
-      padding: 60px 0;
+      margin-top: 120px;
+      padding: 70px 0;
       border-top: 1px solid rgba(0, 212, 255, 0.1);
       text-align: center;
+      background: rgba(0,0,0,0.1);
     }
 
-    /* RESPONSIVE */
+    footer h2 {
+      border: none;
+      color: #00d4ff;
+      margin-bottom: 15px;
+      padding-bottom: 0;
+    }
+
+    /* RESPONSIVE (MOBILE) */
     @media (max-width: 768px) {
-      .container { padding: 30px 20px; }
-      h1 { font-size: 36px; }
-      .memoire-container { grid-template-columns: 1fr; }
-      .pdf-section { height: 350px; }
-      .images-section { flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
-      .images-section img { width: 150px; flex-shrink: 0; }
+      .container { padding: 40px 20px; }
+      h1 { font-size: 38px; }
+      .role { font-size: 14px; }
+      
+      .memoire-container {
+        grid-template-columns: 1fr; /* Pile tout en colonne */
+      }
+      
+      .pdf-section { height: 400px; }
+      
+      .images-section {
+        flex-direction: row; /* Aligne les cartes horizontalement */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        padding-bottom: 15px;
+        gap: 10px;
+      }
+      
+      .images-section a {
+        width: 200px; /* Largeur fixe pour le scroll */
+        flex-shrink: 0;
+        height: 150px;
+      }
     }
   </style>
 </head>
@@ -238,9 +291,9 @@
       </p>
 
       <div class="links">
-        <a href="mailto:decroix.nicolasfrancois@gmail.com">📧 Email</a>
-        <a href="CV DECROIX Nicolas.pdf" target="_blank">📄 Mon CV</a>
-        <a href="https://github.com/DecroixNicolas" target="_blank">💻 GitHub</a>
+        <a href="mailto:decroix.nicolasfrancois@gmail.com">📧 Me Contacter</a>
+        <a href="CV-DECROIX-Nicolas.pdf" target="_blank">📄 Mon CV (PDF)</a>
+        <a href="https://github.com/DecroixNicolas" target="_blank">💻 Profil GitHub</a>
       </div>
     </header>
 
@@ -260,12 +313,21 @@
 
         <div class="memoire-container">
           <div class="pdf-section">
-            <iframe src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+            <iframe src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview" allow="autoplay"></iframe>
           </div>
+          
           <div class="images-section">
-            <img src="Carte-Nationale.jpg" alt="Cartographie Nationale">
-            <img src="Carte-Région.png" alt="Analyse Régionale">
-            <img src="Carte-Varmie.png" alt="Détail Varmie-Mazurie">
+            <a href="carte-nationale.jpg" target="_blank" title="Cliquez pour agrandir">
+              <img src="carte-nationale.jpg" alt="Cartographie Nationale de Défense">
+            </a>
+            
+            <a href="Carte-Région.png" target="_blank" title="Cliquez pour agrandir">
+              <img src="Carte-Région.png" alt="Analyse Géopolitique Régionale">
+            </a>
+            
+            <a href="Carte-Varmie.png" target="_blank" title="Cliquez pour agrandir">
+              <img src="Carte-Varmie.png" alt="Détail Varmie-Mazurie">
+            </a>
           </div>
         </div>
       </div>
@@ -276,19 +338,19 @@
       <div class="skills-grid">
         <div class="skill-card">
           <strong>Analyse Géopolitique</strong>
-          Stratégie militaire, analyse de conflits, relations internationales.
+          <span>Stratégie militaire, analyse de conflits, relations internationales contemporaines.</span>
         </div>
         <div class="skill-card">
           <strong>Défense Européenne</strong>
-          Architecture de sécurité de l'OTAN, Flanc Est, Arctique.
+          <span>Architecture de sécurité de l'OTAN, sécurité du Flanc Est, enjeux Arctique.</span>
         </div>
         <div class="skill-card">
           <strong>Langues</strong>
-          Français (maternel), Anglais (C1), Polonais (B2).
+          <span>Français (maternel), Anglais (C1 - Professionnel), Polonais (B2).</span>
         </div>
         <div class="skill-card">
           <strong>Méthodologie</strong>
-          Recherche académique, interviews de terrain, OSINT, Cartographie (SIG).
+          <span>Recherche académique, interviews de terrain, OSINT, Cartographie (SIG).</span>
         </div>
       </div>
     </div>
@@ -301,9 +363,9 @@
     </div>
 
     <footer>
-      <h2 style="border: none; color: #00d4ff; margin-bottom: 10px;">Contact</h2>
+      <h2>Me Contacter</h2>
       <p>📧 <strong>decroix.nicolasfrancois@gmail.com</strong></p>
-      <p style="margin-top: 25px; opacity: 0.6;">© 2026 Nicolas Decroix | Développé avec des notions de HTML/CSS</p>
+      <p style="margin-top: 25px; opacity: 0.5; font-size: 13px;">© 2026 Nicolas Decroix | Profil Géopolitique & Défense</p>
     </footer>
 
   </div>
