@@ -108,6 +108,11 @@ frontalières dans le contexte sécuritaire de la guerre en Ukraine.</p>
   <div class="Exemples">
      <div>
     <iframe src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview" width="50%" height="300px"></iframe>
+       <div class="images-section">
+    <img src="Carte nationale [Récupéré] copie_page-0001.jpg" alt="Carte nationale">
+    <img src="Carte-Région.png" alt="Carte Région">
+    <img src="Carte-Varmie.png" alt="Carte Varmie">
+  </div>
      </div>
     <a href="#">Live</a>
     <a href="#">Code</a>
