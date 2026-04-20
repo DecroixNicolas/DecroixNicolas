@@ -103,8 +103,7 @@ frontalières dans le contexte sécuritaire de la guerre en Ukraine.</p>
           <li>Travail de recherche continu sur l'année de M1 combinant études théoriques, collecte d'informations en sources ouvertes et revues de presse.
           <li><bold>Terrain de recherche d'un mois en Pologne<bold>, entre Varsovie, Olsztyn et la frontière russo-polonaise. Rencontres et interviews en anglais et polonais avec des représentants locaux (maires, administrateurs régionaux), universitaires et habitants de la zone.
           <li>Création de représentations cartographiques originales afin d'illustrer mes recherches.
-          <li>Aboutissement de ce travail de recherche en un mémoire de 120 pages, obtenant la note de 17/20
-          <li> </li>
+          <li>Aboutissement de ce travail de recherche en un mémoire de 120 pages, obtenant la note de 17/20 </li>
         </ul>
         <div class="project-links">
           <a href="#">Live</a>
