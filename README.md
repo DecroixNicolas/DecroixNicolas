@@ -87,7 +87,6 @@
 
       <div class="links">
         <a href="mailto:decroix.nicolasfrancois@gmail.com">Email</a>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
         <a href="CV DECROIX Nicolas.pdf" target="_blank">CV</a>
       </div>
     </header>
@@ -97,8 +96,9 @@
       <h2>Projects</h2>
 
       <div class="project">
-        <div class="project-title">TaskFlow App</div>
-        <p>Productivity app for managing tasks efficiently.</p>
+        <div class="project-title">Mémoire de Master 1</div>
+        <p>La Pologne et l'exclave de Kaliningrad : projet Bouclier Oriental et nouvelles réalités 
+frontalières dans le contexte sécuritaire de la guerre en Ukraine.</p>
         <ul>
           <li>Built with React + TypeScript</li>
           <li>Drag-and-drop task system</li>
