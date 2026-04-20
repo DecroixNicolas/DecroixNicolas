@@ -156,6 +156,9 @@
   </div>
 </body>
 </html>
+git add .
+git commit -m "Mise à jour du code"
+git push origin main
 <!--
 **DecroixNicolas/DecroixNicolas** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 git add .
