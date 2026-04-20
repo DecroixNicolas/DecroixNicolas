@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicolas Decroix | Portfolio Géopolitique & Défense</title>
   <style>
-    /* STYLE SANS TRACKING - FONTS SYSTÈME */
+    /* STYLE SYSTÈME - AUCUNE TRACE EXTERNE */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -15,56 +15,49 @@
     }
     .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
     
-    /* EN-TÊTE PROFESSIONNEL */
+    /* HEADER */
     header { border-bottom: 1px solid #1e293b; padding-bottom: 30px; margin-bottom: 40px; }
     h1 { font-size: 42px; color: #38bdf8; letter-spacing: -1px; }
-    .subtitle { font-size: 18px; color: #f472b6; font-weight: 600; margin-top: 5px; text-transform: uppercase; letter-spacing: 1px; }
+    .subtitle { font-size: 18px; color: #f472b6; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
     .contact-info { margin-top: 15px; font-size: 14px; color: #94a3b8; }
     
     .nav-btns { display: flex; gap: 12px; margin-top: 25px; flex-wrap: wrap; }
-    .btn { text-decoration: none; padding: 10px 22px; border-radius: 6px; font-size: 14px; font-weight: 600; transition: 0.3s; }
+    .btn { text-decoration: none; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: 0.3s; text-transform: uppercase; }
     .btn-blue { background: #38bdf8; color: #0f172a; }
     .btn-outline { border: 1px solid #334155; color: #f1f5f9; }
     .btn:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2); }
 
     /* SECTIONS */
     section { margin-bottom: 60px; }
-    h2 { font-size: 24px; color: #38bdf8; margin-bottom: 25px; border-left: 4px solid #f472b6; padding-left: 15px; }
+    h2 { font-size: 24px; color: #38bdf8; margin-bottom: 35px; border-left: 4px solid #f472b6; padding-left: 15px; }
 
-    /* BLOC MÉMOIRE - LE "POSTE DE COMMANDE" */
-    .research-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 30px; }
-    .research-header { margin-bottom: 20px; }
-    .research-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 25px; align-items: start; }
-    
-    /* Fenêtre PDF */
-    .pdf-window { 
-      background: #000; border-radius: 8px; border: 1px solid #334155; height: 480px; overflow: hidden; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    /* FRISE CHRONOLOGIQUE (TIMELINE) */
+    .timeline { position: relative; max-width: 850px; margin: 0 auto; padding-left: 40px; }
+    .timeline::after { content: ''; position: absolute; width: 2px; background-color: #1e293b; top: 0; bottom: 0; left: 7px; }
+    .timeline-item { position: relative; margin-bottom: 35px; }
+    .timeline-item::before {
+      content: ''; position: absolute; width: 14px; height: 14px; left: -40px; 
+      background-color: #0f172a; border: 3px solid #f472b6; border-radius: 50%; z-index: 1; top: 6px;
     }
+    .timeline-date { font-weight: 700; color: #f472b6; font-size: 14px; margin-bottom: 5px; display: block; }
+    .timeline-content { background: #1e293b; padding: 20px; border-radius: 8px; border: 1px solid #334155; transition: 0.3s; }
+    .timeline-content:hover { border-color: #38bdf8; }
+    .timeline-content h3 { color: #38bdf8; font-size: 18px; margin-bottom: 5px; }
+    .timeline-content p { font-size: 14px; color: #94a3b8; }
+
+    /* BLOC RECHERCHE & MÉMOIRE */
+    .research-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 25px; }
+    .research-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; margin-top: 20px; }
+    .pdf-window { background: #000; border-radius: 6px; height: 480px; overflow: hidden; border: 1px solid #334155; }
     .pdf-window iframe { width: 100%; height: 100%; border: none; }
-
-    /* Galerie de cartes */
-    .visual-gallery { display: flex; flex-direction: column; gap: 12px; }
-    .visual-gallery a { 
-      display: block; border-radius: 6px; overflow: hidden; border: 1px solid #334155; height: 152px; 
-      transition: 0.3s; cursor: zoom-in;
-    }
-    .visual-gallery img { width: 100%; height: 100%; object-fit: cover; }
-    .visual-gallery a:hover { border-color: #38bdf8; transform: scale(1.02); }
-
-    /* EXPÉRIENCES & FORMATION */
-    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 20px; transition: 0.3s; }
-    .card:hover { border-color: #f472b6; }
-    .card-top { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 5px; }
-    .date { color: #f472b6; font-weight: 600; }
-    .org { color: #38bdf8; font-weight: 600; display: block; margin-bottom: 10px; }
-    .content { font-size: 14px; color: #94a3b8; }
-    .content ul { padding-left: 15px; margin-top: 10px; }
+    
+    .visual-gallery { display: flex; flex-direction: column; gap: 10px; }
+    .visual-gallery a img { width: 100%; border-radius: 4px; border: 1px solid #334155; transition: 0.3s; height: 153px; object-fit: cover; }
+    .visual-gallery a img:hover { border-color: #38bdf8; transform: scale(1.02); }
 
     /* SKILLS */
-    .skills-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-    .skill-tag { background: #0f172a; border: 1px solid #334155; padding: 15px; border-radius: 6px; text-align: center; }
+    .skills-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 30px; }
+    .skill-tag { background: #1a2233; border: 1px solid #334155; padding: 15px; border-radius: 6px; text-align: center; border-bottom: 3px solid #f472b6; }
     .skill-tag strong { color: #38bdf8; display: block; font-size: 14px; margin-bottom: 5px; }
     .skill-tag span { font-size: 12px; color: #94a3b8; }
 
@@ -72,9 +65,7 @@
 
     @media (max-width: 850px) {
       .research-grid { grid-template-columns: 1fr; }
-      .pdf-window { height: 400px; }
-      .visual-gallery { flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
-      .visual-gallery a { width: 180px; flex-shrink: 0; }
+      .timeline { padding-left: 30px; }
     }
   </style>
 </head>
@@ -84,20 +75,64 @@
   <header>
     <h1>Nicolas Decroix</h1>
     <p class="subtitle">Analyste Géopolitique & Défense | Flanc Est & OTAN</p>
-    <p class="contact-info">📍 Paris / Nord | 📧 decroix.nicolasfrancois@gmail.com | 📞 +33 7 69 28 30 80</p>
+    <p class="contact-info">📍 Paris, France | 📧 decroix.nicolasfrancois@gmail.com | 📞 +33 (0)7 69 28 30 80</p>
     <div class="nav-btns">
-      <a href="CV DECROIX Nicolas.pdf" target="_blank" class="btn btn-blue">📄 Télécharger CV (PDF)</a>
+      <a href="CV DECROIX Nicolas.pdf" target="_blank" class="btn btn-blue">📄 Consulter CV PDF</a>
+      <a href="mailto:decroix.nicolasfrancois@gmail.com" class="btn btn-outline">📧 Contact</a>
       <a href="https://linkedin.com/in/nicolas-decroix" target="_blank" class="btn btn-outline">🔗 LinkedIn</a>
-      <a href="https://github.com/DecroixNicolas" target="_blank" class="btn btn-outline">💻 GitHub / SIG</a>
     </div>
   </header>
 
   <section>
-    <h2>📚 Travaux de Recherche (IFG)</h2>
+    <h2>🎓 Cursus Académique</h2>
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <span class="timeline-date">2024 — 2026</span>
+        <div class="timeline-content">
+          <h3>Master de Géopolitique</h3>
+          <p><strong>Institut Français de Géopolitique (IFG) - Université Paris-VIII</strong></p>
+          <p>Spécialisation : Nouveaux Acteurs de la Compétition Stratégique. Recherche approfondie sur le Flanc Est européen.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">2021 — 2024</span>
+        <div class="timeline-content">
+          <h3>Double Licence Histoire & Géographie</h3>
+          <p><strong>Université Jean Moulin Lyon-III</strong></p>
+          <p>Mention Bien pour les deux cursus. Maîtrise de l'analyse spatiale et du temps long historique.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">2020 — 2021</span>
+        <div class="timeline-content">
+          <h3>Baccalauréat Mention Très Bien</h3>
+          <p><strong>Institution des Chartreux (Lyon)</strong></p>
+          <p>Spécialités Mathématiques et HGGSP (Histoire-Géographie, Géopolitique et Sciences Politiques).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">2016 — 2020</span>
+        <div class="timeline-content">
+          <h3>Lycée Français de Varsovie (Pologne)</h3>
+          <p>Immersion culturelle et linguistique internationale. Point de départ de l'expertise sur les enjeux de l'Europe centrale.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>📚 Recherche : Kaliningrad & Bouclier Oriental</h2>
     <div class="research-card">
-      <div class="research-header">
-        <h3 style="font-size: 20px; color: #f1f5f9;">La Pologne et l'exclave de Kaliningrad : le projet Bouclier Oriental</h3>
-        <p style="color: #94a3b8; font-size: 14px; margin-top: 5px;">Mémoire de Master 1 validé avec la note de <strong>17/20</strong></p>
+      <div style="margin-bottom: 15px;">
+        <h3 style="color: #f1f5f9; font-size: 18px;">La Pologne et l'exclave de Kaliningrad : nouvelles réalités frontalières</h3>
+        <p style="font-size: 14px; color: #94a3b8; margin-top: 5px;">
+          Mémoire de Master 1 validé avec la note de <strong>17/20</strong>. Terrain en Pologne, interviews et analyse OSINT.
+        </p>
       </div>
       
       <div class="research-grid">
@@ -106,99 +141,45 @@
         </div>
         
         <div class="visual-gallery">
-          <a href="carte-nationale.jpg" target="_blank" title="Voir la carte nationale">
-            <img src="carte-nationale.jpg" alt="Carte Nationale">
-          </a>
-          <a href="Carte-Région.png" target="_blank" title="Voir l'analyse régionale">
-            <img src="Carte-Région.png" alt="Carte Régionale">
-          </a>
-          <a href="Carte-Varmie.png" target="_blank" title="Voir le détail Varmie-Mazurie">
-            <img src="Carte-Varmie.png" alt="Carte Varmie">
-          </a>
-          <div style="text-align: center; padding-top: 5px;">
-            <p style="font-size: 11px; color: #f472b6; font-weight: 600;">↖ Cliquez sur les cartes pour zoomer</p>
-          </div>
+          <a href="carte-nationale.jpg" target="_blank" title="Agrandir la carte nationale"><img src="carte-nationale.jpg" alt="Carte 1"></a>
+          <a href="Carte-Région.png" target="_blank" title="Agrandir l'analyse régionale"><img src="Carte-Région.png" alt="Carte 2"></a>
+          <a href="Carte-Varmie.png" target="_blank" title="Agrandir le détail Varmie-Mazurie"><img src="Carte-Varmie.png" alt="Carte 3"></a>
+          <p style="font-size: 11px; color: #f472b6; text-align: center; font-weight: bold; margin-top: 5px;">↖ CARTOGRAPHIE SIG (QGIS / ILLUSTRATOR)</p>
         </div>
-      </div>
-      <div style="margin-top: 20px; font-size: 14px; color: #94a3b8;">
-        <p><strong>Méthodologie :</strong> Un mois d'enquête de terrain en Pologne, interviews d'acteurs politiques et militaires, analyse de sources ouvertes (OSINT).</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>💼 Parcours Professionnel & Académique</h2>
-    <div class="info-grid">
-      
-      <div class="card">
-        <div class="card-top"><span class="date">2024 — Présent</span></div>
-        <span class="org">European Reform Universities Alliance (ERUA)</span>
-        <div class="content">
-          <strong>Assistant de la Secrétaire Générale</strong>
-          <ul>
-            <li>Analyses stratégiques des politiques éducatives de l'UE.</li>
-            <li>Rédaction de rapports en anglais (C2).</li>
-          </ul>
-        </div>
+    <h2>💼 Expériences Clés</h2>
+    <div class="skills-bar" style="grid-template-columns: 1fr 1fr; border-bottom: none;">
+      <div class="skill-tag" style="text-align: left;">
+        <span style="color: #f472b6; font-size: 12px; font-weight: bold;">2024 — PRÉSENT</span>
+        <strong>Assistant de la Secrétaire Générale</strong>
+        <p style="font-size: 13px;">ERUA (Paris-VIII) : Analyses stratégiques et rapports en anglais (C2) sur les politiques européennes.</p>
       </div>
-
-      <div class="card">
-        <div class="card-top"><span class="date">Été 2023</span></div>
-        <span class="org">CNRS - Programme 13-Novembre</span>
-        <div class="content">
-          <strong>Stagiaire Recherche</strong>
-          <p>Transcription et analyse de témoignages (victimes attentats/déportés). Respect strict de la confidentialité.</p>
-        </div>
+      <div class="skill-tag" style="text-align: left;">
+        <span style="color: #f472b6; font-size: 12px; font-weight: bold;">ÉTÉ 2023</span>
+        <strong>Stagiaire Recherche (CNRS)</strong>
+        <p style="font-size: 13px;">Programme 13-Novembre : Analyse de témoignages et respect strict des clauses de confidentialité.</p>
       </div>
-
-      <div class="card">
-        <div class="card-top"><span class="date">2024 — 2026</span></div>
-        <span class="org">Institut Français de Géopolitique</span>
-        <div class="content">
-          <strong>Master Géopolitique (NACS)</strong>
-          <p>Spécialisation : Nouveaux Acteurs de la Compétition Stratégique. Focus : Flanc Est et défense européenne.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-top"><span class="date">2021 — 2024</span></div>
-        <span class="org">Université Jean Moulin Lyon-III</span>
-        <div class="content">
-          <strong>Double Licence Histoire & Géographie</strong>
-          <p>Mention Bien pour les deux cursus. Solides bases en analyse spatiale et temps long.</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <section>
-    <h2>🛠 Expertises Techniques</h2>
+    <h2>🛠 Expertises</h2>
     <div class="skills-bar">
-      <div class="skill-tag">
-        <strong>Cartographie & SIG</strong>
-        <span>QGIS, ArcGIS, Adobe Illustrator</span>
-      </div>
-      <div class="skill-tag">
-        <strong>Analyse Stratégique</strong>
-        <span>OSINT, Veille défense, Enquêtes terrain</span>
-      </div>
       <div class="skill-tag">
         <strong>Langues</strong>
         <span>Anglais (C2), Polonais (B1-B2), Espagnol (B1)</span>
       </div>
       <div class="skill-tag">
-        <strong>Publications</strong>
-        <span>Diploweb, Éditions du Nouveau Monde</span>
+        <strong>Outils SIG</strong>
+        <span>Maîtrise QGIS, ArcGIS et Adobe Illustrator</span>
+      </div>
+      <div class="skill-tag">
+        <strong>Méthodologie</strong>
+        <span>OSINT, Veille stratégique, Enquête de terrain</span>
       </div>
     </div>
   </section>
-
-  <footer>
-    <p>Nicolas Decroix — Portfolio Analyste Géopolitique — 2026</p>
-    <p style="margin-top: 5px; opacity: 0.5;">Hébergé via GitHub Pages - Design optimisé pour le recrutement</p>
-  </footer>
-</div>
-
-</body>
-</html>
