@@ -100,10 +100,10 @@
   <p>La Pologne et l'exclave de Kaliningrad : projet Bouclier Oriental et nouvelles réalités 
 frontalières dans le contexte sécuritaire de la guerre en Ukraine.</p>
   <ul>
-    <li>Travail de recherche continu sur l'année de M1 combinant études théoriques, collecte d'informations en sources ouvertes et revues de presse.</li>
-    <li><strong>Terrain de recherche d'un mois en Pologne</strong>, entre Varsovie, Olsztyn et la frontière russo-polonaise. Rencontres et interviews en anglais et polonais avec des représentants locaux (maires, administrateurs régionaux), universitaires et habitants de la zone.</li>
-    <li>Création de représentations cartographiques originales afin d'illustrer mes recherches.</li>
-    <li>Aboutissement de ce travail de recherche en un mémoire de 120 pages, obtenant la note de 17/20</li>
+    <li>Travail de recherche continu sur l'année de M1 combinant<strong> études théoriques, collecte d'informations en sources ouvertes et revues de presse</strong>.</li>
+    <li><strong>Terrain de recherche d'un mois en Pologne</strong>, entre Varsovie, Olsztyn et la frontière russo-polonaise. Rencontres et interviews en <strong>anglais et polonais</strong> avec des représentants locaux (maires, administrateurs régionaux), universitaires et habitants de la zone.</li>
+    <li>Création de <strong>représentations cartographiques originales</strong> afin d'illustrer mes recherches.</li>
+    <li>Aboutissement de ce travail de recherche en un <strong>mémoire de 120 pages, obtenant la note de 17/20</strong></li>
   </ul>
   <div class="project-links">
     <a href="#">Live</a>
