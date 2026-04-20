@@ -86,7 +86,7 @@
       </p>
 
       <div class="links">
-        <a href="decroix.nicolasfrancois@gmail.com">Email</a>
+        <a href="mailto:decroix.nicolasfrancois@gmail.com">Email</a>
         <a href="https://github.com/yourusername" target="_blank">GitHub</a>
         <a href="cv.pdf" target="_blank">CV</a>
       </div>
