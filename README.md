@@ -95,22 +95,21 @@
     <div class="section">
       <h2>Projects</h2>
 
-      <div class="project">
-        <div class="project-title">Mémoire de Master 1</div>
-        <p>La Pologne et l'exclave de Kaliningrad : projet Bouclier Oriental et nouvelles réalités 
+  <div class="project">
+  <div class="project-title">Mémoire de Master 1</div>
+  <p>La Pologne et l'exclave de Kaliningrad : projet Bouclier Oriental et nouvelles réalités 
 frontalières dans le contexte sécuritaire de la guerre en Ukraine.</p>
-        <ul>
-          <li>Travail de recherche continu sur l'année de M1 combinant études théoriques, collecte d'informations en sources ouvertes et revues de presse.
-          <li><bold>Terrain de recherche d'un mois en Pologne<bold>, entre Varsovie, Olsztyn et la frontière russo-polonaise. Rencontres et interviews en anglais et polonais avec des représentants locaux (maires, administrateurs régionaux), universitaires et habitants de la zone.
-          <li>Création de représentations cartographiques originales afin d'illustrer mes recherches.
-          <li>Aboutissement de ce travail de recherche en un mémoire de 120 pages, obtenant la note de 17/20 </li>
-        
-        </ul>
-        <div class="project-links">
-          <a href="#">Live</a>
-          <a href="#">Code</a>
-        </div>
-      </div>
+  <ul>
+    <li>Travail de recherche continu sur l'année de M1 combinant études théoriques, collecte d'informations en sources ouvertes et revues de presse.</li>
+    <li><strong>Terrain de recherche d'un mois en Pologne</strong>, entre Varsovie, Olsztyn et la frontière russo-polonaise. Rencontres et interviews en anglais et polonais avec des représentants locaux (maires, administrateurs régionaux), universitaires et habitants de la zone.</li>
+    <li>Création de représentations cartographiques originales afin d'illustrer mes recherches.</li>
+    <li>Aboutissement de ce travail de recherche en un mémoire de 120 pages, obtenant la note de 17/20</li>
+  </ul>
+  <div class="project-links">
+    <a href="#">Live</a>
+    <a href="#">Code</a>
+  </div>
+</div>
 
       <div class="project">
         <div class="project-title">Weather Dashboard</div>
