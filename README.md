@@ -292,7 +292,7 @@
 
       <div class="links">
         <a href="mailto:decroix.nicolasfrancois@gmail.com">📧 Me Contacter</a>
-        <a href="CV-DECROIX-Nicolas.pdf" target="_blank">📄 Mon CV (PDF)</a>
+        <a href="CV DECROIX Nicolas.pdf" target="_blank">📄 Mon CV (PDF)</a>
         <a href="https://github.com/DecroixNicolas" target="_blank">💻 Profil GitHub</a>
       </div>
     </header>
