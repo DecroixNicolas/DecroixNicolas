@@ -132,6 +132,9 @@ frontalières dans le contexte sécuritaire de la guerre en Ukraine.</p>
   </ul>
   <div class="Exemples">
      <div>
+       <div class="memoire-container">
+  <!-- PDF à gauche -->
+  <div class="pdf-section">
     <iframe src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview" width="50%" height="300px"></iframe>
        <div class="images-section">
     <img src="Carte nationale [Récupéré] copie_page-0001.jpg" alt="Carte nationale">
