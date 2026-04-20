@@ -88,7 +88,7 @@
       <div class="links">
         <a href="mailto:decroix.nicolasfrancois@gmail.com">Email</a>
         <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="CVDecroixNicolas.pdf" target="_blank">CV</a>
       </div>
     </header>
 
