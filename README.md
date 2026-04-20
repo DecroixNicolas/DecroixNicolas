@@ -106,9 +106,9 @@ frontalières dans le contexte sécuritaire de la guerre en Ukraine.</p>
     <li>Aboutissement de ce travail de recherche en un <strong>mémoire de 120 pages, obtenant la note de 17/20</strong></li>
   </ul>
   <div class="Exemples">
-     <ul>
+     <div>
     <iframe src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview" width="50%" height="300px"></iframe>
-     </ul>
+     </div>
     <a href="#">Live</a>
     <a href="#">Code</a>
   </div>
