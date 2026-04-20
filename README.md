@@ -80,7 +80,7 @@
     <!-- HERO -->
     <header>
       <h1>Nicolas Decroix</h1>
-      <div class="role">Diplomé Master II Géopolitique | Spécialisé Sécurité et Défense OTAN | zones Flanc Est et Arctique</div>
+      <div class="role">Diplomé Master II Géopolitique | Spécialisé Défense/OTAN | Sécurité du Flanc Est et de l'Arctique</div>
       <p>
         I build fast, clean, and user-focused web applications.
       </p>
