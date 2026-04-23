@@ -101,8 +101,8 @@
     <h1>Nicolas Decroix</h1>
     <div class="status">Analyste Géopolitique & Défense</div>
     <nav>
-      <button class="nav-btn active" onclick="switchTab('exps')">💼 Parcours & Stages</button>
-      <button class="nav-btn" onclick="switchTab('projets')">🚀 Projets & Recherche</button>
+      <button class="nav-btn active" onclick="switchTab('exps')">💼 Expériences professionelles</button>
+      <button class="nav-btn" onclick="switchTab('projets')">🚀 Recherche académique et projets</button>
       <button class="nav-btn" onclick="switchTab('skills')">🛠 Compétences</button>
       <button class="nav-btn" onclick="switchTab('formation')">🎓 Formation</button>
     </nav>
