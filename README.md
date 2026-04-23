@@ -102,7 +102,7 @@
     <div class="status">Analyste Géopolitique & Défense</div>
     <nav>
       <button class="nav-btn active" onclick="switchTab('exps')">💼 Expériences professionelles</button>
-      <button class="nav-btn" onclick="switchTab('projets')">🚀 Recherche académique et projets</button>
+      <button class="nav-btn" onclick="switchTab('projets')">🚀 Recherche académique et engagement personnel</button>
       <button class="nav-btn" onclick="switchTab('skills')">🛠 Compétences</button>
       <button class="nav-btn" onclick="switchTab('formation')">🎓 Formation</button>
     </nav>
@@ -165,6 +165,7 @@
           <div class="image-gallery">
             <img src="Carte-nationale.png" alt="Analyse Nationale" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Fichier+introuvable:+Carte-nationale.png'">
             <img src="Carte-Region.png" alt="Analyse Régionale" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Fichier+introuvable:+Carte-Region.png'">
+            <img src="Carte-Varmie.png" alt="Analyse Régionale" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Fichier+introuvable:+Carte-Region.png'">
             <p style="font-size:11px; color:var(--text-dim); text-align:center; font-style:italic;">Production cartographique QGIS / Illustrator</p>
           </div>
         </div>
@@ -177,7 +178,7 @@
             </div>
             <p class="article-sub">"Visite scientifique d'un étudiant français"</p>
             <p class="article-desc">
-                Aperçu de l'article de l'Université de Warmie et Mazurie relatant mon terrain de recherche en Pologne et mes échanges avec les instances académiques sur la sécurité frontalière.
+                Aperçu de l'article de l'Université de Varmie-Mazurie relatant mon terrain de recherche en Pologne et mes échanges avec les instances locales sur la sécurité frontalière.
             </p>
         </a>
       </div>
@@ -186,11 +187,11 @@
         <h3>Activités & Engagements</h3>
         <div style="border-left: 2px solid var(--accent); padding-left: 20px; margin-bottom: 20px;">
             <p><strong>Séminaire Université de Varsovie (2025)</strong></p>
-            <p style="font-size: 13px; color:var(--text-dim);">Présentation d'ouvrage géopolitique lors du séminaire de l'Office Français.</p>
+            <p style="font-size: 13px; color:var(--text-dim);">Présentation d'un ouvrage géopolitique lors du séminaire de lecture de l'Office pour la culture française de l'Université de Varsovie.</p>
         </div>
         <div style="border-left: 2px solid var(--accent); padding-left: 20px;">
-            <p><strong>Contribution - 666 Albums Metal</strong></p>
-            <p style="font-size: 13px; color:var(--text-dim);">Rédaction d'une chronique pour l'encyclopédie musicale des Éditions du Nouveau Monde.</p>
+            <p><strong>Contribution à l'ouvrage "666 Albums Metal" de Christophe Goffette</strong></p>
+            <p style="font-size: 13px; color:var(--text-dim);">Rédaction d'une chronique pour l'encyclopédie musicale "666 albums métal essentiels" aux Éditions du Nouveau Monde.</p>
         </div>
       </div>
     </div>
