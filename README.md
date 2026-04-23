@@ -29,97 +29,60 @@
 
     /* SIDEBAR */
     .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: var(--sidebar-width);
-      height: 100vh;
-      background: var(--sidebar-bg);
-      padding: 40px 20px;
-      border-right: 1px solid var(--border);
-      z-index: 100;
-      display: flex;
-      flex-direction: column;
+      position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh;
+      background: var(--sidebar-bg); padding: 40px 20px; border-right: 1px solid var(--border);
+      z-index: 100; display: flex; flex-direction: column;
     }
-
     .sidebar h1 { font-size: 20px; color: var(--accent); margin-bottom: 5px; }
     .sidebar .status { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 40px; }
 
     .nav-btn {
-      display: block;
-      width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 10px;
-      color: var(--text-dim);
-      background: rgba(255,255,255,0.03);
-      border: 1px solid transparent;
-      border-radius: 6px;
-      text-align: left;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
+      display: block; width: 100%; padding: 12px 15px; margin-bottom: 10px;
+      color: var(--text-dim); background: rgba(255,255,255,0.03); border: 1px solid transparent;
+      border-radius: 6px; text-align: left; font-size: 14px; font-weight: 600; cursor: pointer; transition: 0.2s;
     }
-    .nav-btn:hover, .nav-btn.active { background: var(--accent); color: var(--bg-dark); }
-
-    .sidebar-footer { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); }
-    .linkedin-link {
-      display: inline-block;
-      text-decoration: none;
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: bold;
-      border: 1px solid var(--accent);
-      padding: 6px 12px;
-      border-radius: 4px;
-    }
+    .nav-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .nav-btn.active { background: var(--accent); color: var(--bg-dark); }
 
     /* CONTENU */
-    .main-content { padding: 60px 50px 100px 50px; max-width: 1300px; margin: 0 auto; }
-    .tab-pane { display: none; animation: fadeIn 0.4s ease; }
-    .tab-pane.active { display: block; }
+    .main-content { padding: 60px 50px 100px 50px; max-width: 1200px; margin: 0 auto; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; animation: fadeIn 0.4s ease; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     h2 { font-size: 26px; margin-bottom: 35px; border-left: 4px solid var(--accent); padding-left: 15px; }
-    h3 { font-size: 18px; margin: 25px 0 15px 0; color: var(--accent); }
+    h3 { font-size: 18px; margin: 25px 0 15px 0; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 5px; }
 
-    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 25px; margin-bottom: 25px; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 30px; margin-bottom: 30px; }
 
-    /* LAYOUT RECHERCHE OPTIMISÉ */
-    .research-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-    .pdf-frame { width: 100%; height: 500px; border-radius: 6px; border: 1px solid var(--border); }
+    /* LAYOUT RECHERCHE */
+    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; align-items: start; margin-bottom: 30px; }
+    .pdf-mini { width: 100%; height: 500px; border-radius: 8px; border: 1px solid var(--border); background: #000; }
     .image-gallery { display: flex; flex-direction: column; gap: 15px; }
-    .image-gallery img { width: 100%; border-radius: 6px; border: 1px solid var(--border); display: block; }
-
-    /* COMPÉTENCES TAGS */
-    .skill-tag-container { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skill-tag { border: 1px solid var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 13px; }
-
-    /* PREVIEW ARTICLE */
-    .article-preview {
-      display: flex;
-      gap: 20px;
-      background: rgba(0,0,0,0.2);
-      padding: 15px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      text-decoration: none;
-      color: inherit;
-      transition: 0.3s;
+    .image-gallery img { 
+      width: 100%; border-radius: 6px; border: 1px solid var(--border); 
+      background: #0f172a; min-height: 100px; /* Zone visible même si image absente */
     }
-    .article-preview:hover { border-color: var(--accent); }
-    .article-img { width: 120px; height: 80px; object-fit: cover; border-radius: 4px; background: #334155; }
-    .article-info h4 { color: var(--accent); font-size: 15px; margin-bottom: 5px; }
-    .article-info p { font-size: 12px; color: var(--text-dim); font-style: italic; }
 
-    @media (max-width: 1100px) {
+    /* ARTICLE LINK BLOCK */
+    .article-box {
+      display: flex; gap: 20px; background: rgba(15, 23, 42, 0.5); padding: 20px; 
+      border-radius: 8px; border: 1px solid var(--accent); text-decoration: none; 
+      color: inherit; transition: 0.3s; align-items: center;
+    }
+    .article-box:hover { background: rgba(56, 189, 248, 0.1); transform: translateY(-2px); }
+    .article-thumb { width: 150px; height: 100px; object-fit: cover; border-radius: 4px; background: #334155; flex-shrink: 0; }
+    .article-text h4 { color: var(--accent); margin-bottom: 8px; font-size: 16px; }
+    .article-text p { font-size: 13px; color: var(--text-dim); line-height: 1.4; }
+
+    /* SKILLS TAGS */
+    .skill-tag-container { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag { background: var(--bg-dark); border: 1px solid var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 13px; }
+
+    @media (max-width: 1024px) {
       body { padding-left: 0; }
       .sidebar { width: 100%; height: auto; position: relative; }
-      .main-content { padding: 20px; }
+      .main-content { padding: 30px 20px; }
       .research-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -135,9 +98,9 @@
       <button class="nav-btn" onclick="switchTab('skills')">🛠 Compétences</button>
       <button class="nav-btn" onclick="switchTab('formation')">🎓 Formation</button>
     </nav>
-    <div class="sidebar-footer">
-      <p style="font-size: 11px; color: var(--text-dim); margin-bottom: 10px;">✉️ decroix.nicolasfrancois@gmail.com</p>
-      <a href="https://www.linkedin.com/in/nicolas-decroix-805218222/" target="_blank" class="linkedin-link">LinkedIn ↗</a>
+    <div class="sidebar-footer" style="margin-top:auto;">
+      <p style="font-size: 11px; color: var(--text-dim); margin-bottom: 15px;">✉️ decroix.nicolasfrancois@gmail.com</p>
+      <a href="https://www.linkedin.com/in/nicolas-decroix-805218222/" target="_blank" class="linkedin-link" style="display: inline-block; text-decoration: none; color: var(--accent); font-size: 13px; font-weight: bold; border: 1px solid var(--accent); padding: 6px 12px; border-radius: 4px;">LinkedIn ↗</a>
     </div>
   </aside>
 
@@ -146,92 +109,111 @@
     <div id="exps" class="tab-pane active">
       <h2>Parcours Professionnel & Stages</h2>
       <div class="card">
-        <div style="display:flex; justify-content:space-between;">
-          <span style="font-weight:700; color:var(--accent);">Assistant au Secrétariat Général</span>
-          <span style="font-size:11px; color:var(--text-dim);">Nov. 2024 — Déc. 2025</span>
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <span style="font-weight:700; color:var(--accent); font-size:18px;">Student Assistant to the Secretary General</span>
+          <span style="font-size:11px; color:var(--text-dim); font-weight:bold;">Nov. 2024 — Présent</span>
         </div>
-        <span style="display:block; font-size:14px; margin-bottom:10px;">ERUA - Université Paris-VIII</span>
-        <ul style="font-size:14px; color:var(--text-dim); margin-left:20px;">
-          <li>Analyses stratégiques et rapports de conformité européenne.</li>
-          <li>Animation de comités de pilotage (Environnement anglophone).</li>
+        <span style="color:var(--text-main); font-weight:600; margin-bottom:15px; display:block;">ERUA - Université Paris-VIII</span>
+        <ul>
+          <li>Analyse de documents stratégiques européens.</li>
+          <li>Appui à la gouvernance de l'alliance universitaire.</li>
+          <li>Environnement de travail bilingue Anglais/Français.</li>
         </ul>
       </div>
 
       <div class="card">
-        <div style="display:flex; justify-content:space-between;">
-          <span style="font-weight:700; color:var(--accent);">Stagiaire Recherche</span>
-          <span style="font-size:11px; color:var(--text-dim);">ÉTÉ 2023</span>
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <span style="font-weight:700; color:var(--accent); font-size:18px;">Stagiaire Recherche</span>
+          <span style="font-size:11px; color:var(--text-dim); font-weight:bold;">2023</span>
         </div>
-        <span style="display:block; font-size:14px; margin-bottom:10px;">CNRS - Equipex MATRICE</span>
-        <ul style="font-size:14px; color:var(--text-dim); margin-left:20px;">
-          <li>Transcription de témoignages sensibles (Attentats 2015).</li>
-        </ul>
+        <span style="color:var(--text-main); font-weight:600; margin-bottom:15px; display:block;">CNRS - Equipex MATRICE</span>
+        <p style="font-size:14px; color:var(--text-dim);">Traitement de données sensibles liées aux programmes de mémoire traumatique (13-Novembre).</p>
       </div>
     </div>
 
     <div id="projets" class="tab-pane">
-      <h2>Projets & Travaux</h2>
+      <h2>Recherche Académique & Projets</h2>
       
       <div class="card">
-        <h3>1. Recherche Académique (Mémoire M1)</h3>
-        <p style="margin-bottom: 20px; font-size: 14px;"><strong>Sujet :</strong> Militarisation de la frontière Kaliningrad / Pologne (Note: 17/20).</p>
+        <h3>Mémoire de Recherche (Master 1)</h3>
+        <p style="margin-bottom: 20px; font-size: 15px;">
+            <strong>Thématique :</strong> Militarisation de la frontière russo-polonaise et enjeux de l'exclave de Kaliningrad. 
+            <span style="color:var(--accent); font-weight:bold;">Note : 17/20</span>
+        </p>
+        
         <div class="research-grid">
-          <iframe class="pdf-frame" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+          <iframe class="pdf-mini" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+          
           <div class="image-gallery">
-            <img src="Carte-nationale.png" alt="Carte Nationale">
-            <img src="Carte-Region.png" alt="Carte Régionale">
-            <img src="Carte-Varmie.png" alt="Carte Locale">
+            <img src="Carte-nationale.png" alt="[Image de la carte nationale de Kaliningrad]" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Image+non+trouvée:+Carte-nationale.png'">
+            <img src="Carte-Region.png" alt="[Image de la carte régionale de Kaliningrad]" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Image+non+trouvée:+Carte-Region.png'">
+            <p style="font-size:11px; color:var(--text-dim); text-align:center; font-style:italic;">Cartographies réalisées via QGIS et Adobe Illustrator</p>
           </div>
         </div>
+
+        <h3>Terrain & Coopération Internationale</h3>
+        <a href="http://wns.uwm.edu.pl/inp/wizyta-naukowa-studenta-z-francji" target="_blank" class="article-box">
+            <img src="preview-uwm.jpg" class="article-thumb" alt="Visite Olsztyn" onerror="this.src='https://via.placeholder.com/150x100/1e293b/38bdf8?text=Article+Logo'">
+            <div class="article-text">
+                <h4>Wizyta naukowa studenta z Francji (UWM Olsztyn)</h4>
+                <p><strong>Traduction :</strong> "Visite scientifique d'un étudiant français".</p>
+                <p>Article de l'Université de Warmie et Mazurie relatant ma visite de recherche et mes échanges avec les instances académiques polonaises sur la sécurité frontalière.</p>
+            </div>
+        </a>
       </div>
 
       <div class="card">
-        <h3>2. Activités & Engagements</h3>
-        
-        <a href="http://wns.uwm.edu.pl/inp/wizyta-naukowa-studenta-z-francji" target="_blank" class="article-preview">
-          <div style="width:120px; height:80px; background:url('http://wns.uwm.edu.pl/sites/default/files/styles/medium/public/images/inp/img_20230620_111005.jpg') center/cover; border-radius:4px;"></div>
-          <div class="article-info">
-            <h4>Wizyta naukowa studenta z Francji</h4>
-            <p>Traduction : "Visite scientifique d'un étudiant français" — Rencontre officielle avec les autorités académiques à l'Université d'Olsztyn (UWM).</p>
-          </div>
-        </a>
-
-        <div style="margin-top:20px; padding:15px; border-left:2px solid var(--accent); background:rgba(255,255,255,0.02);">
-          <p><strong>Contribution Encyclopédique</strong></p>
-          <p style="font-size:13px; color:var(--text-dim);">Rédaction d'une chronique pour l'ouvrage <em>666 Albums Metal</em> (Éditions du Nouveau Monde).</p>
-        </div>
+        <h3>Autres Engagements</h3>
+        <ul style="list-style: none;">
+            <li style="margin-bottom: 15px; padding-left: 15px; border-left: 2px solid var(--accent);">
+                <strong>Séminaire Université de Varsovie (2025)</strong><br>
+                <span style="font-size: 13px; color:var(--text-dim);">Présentation d'ouvrage géopolitique à l'Office Français.</span>
+            </li>
+            <li style="padding-left: 15px; border-left: 2px solid var(--accent);">
+                <strong>666 Albums Metal (Éd. Nouveau Monde)</strong><br>
+                <span style="font-size: 13px; color:var(--text-dim);">Rédaction d'une chronique d'album pour l'encyclopédie musicale.</span>
+            </li>
+        </ul>
       </div>
     </div>
 
     <div id="skills" class="tab-pane">
-      <h2>Expertises & Langues</h2>
+      <h2>Expertises</h2>
       <div class="card">
-        <h3 style="margin-top:0;">Compétences Techniques</h3>
+        <h3>Compétences Techniques</h3>
         <div class="skill-tag-container">
-          <span class="skill-tag">QGIS / ArcGIS</span>
-          <span class="skill-tag">Analyse Géopolitique</span>
-          <span class="skill-tag">OSINT / Veille</span>
-          <span class="skill-tag">Adobe Illustrator</span>
-          <span class="skill-tag">Suite Office</span>
+          <div class="skill-tag">Cartographie (QGIS / ArcGIS)</div>
+          <div class="skill-tag">Analyse Géopolitique</div>
+          <div class="skill-tag">Veille OSINT</div>
+          <div class="skill-tag">Adobe Illustrator</div>
+          <div class="skill-tag">Suite Office</div>
         </div>
       </div>
       <div class="card">
         <h3>Langues</h3>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap:10px;">
-          <div style="background:var(--bg-dark); padding:10px; border-radius:6px; text-align:center;"><strong>Anglais</strong><br><small>C2 (Bilingue)</small></div>
-          <div style="background:var(--bg-dark); padding:10px; border-radius:6px; text-align:center;"><strong>Polonais</strong><br><small>B1-B2</small></div>
-          <div style="background:var(--bg-dark); padding:10px; border-radius:6px; text-align:center;"><strong>Espagnol</strong><br><small>B1</small></div>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap:15px;">
+          <div style="background:var(--bg-dark); padding:15px; border-radius:8px; text-align:center; border:1px solid var(--border);">
+            <strong style="display:block;">Français</strong><span style="color:var(--accent); font-size:11px;">Maternel</span>
+          </div>
+          <div style="background:var(--bg-dark); padding:15px; border-radius:8px; text-align:center; border:1px solid var(--border);">
+            <strong style="display:block;">Anglais</strong><span style="color:var(--accent); font-size:11px;">C2 (Bilingue)</span>
+          </div>
+          <div style="background:var(--bg-dark); padding:15px; border-radius:8px; text-align:center; border:1px solid var(--border);">
+            <strong style="display:block;">Polonais</strong><span style="color:var(--accent); font-size:11px;">B1-B2</span>
+          </div>
         </div>
       </div>
     </div>
 
     <div id="formation" class="tab-pane">
-      <h2>Cursus Académique</h2>
+      <h2>Parcours Académique</h2>
       <div class="card">
-        <p><strong>2024-2026 :</strong> Master Géopolitique (IFG). Spé. Nouveaux Acteurs.</p>
+        <p><strong>Master Géopolitique</strong> | Institut Français de Géopolitique (Paris-VIII)</p>
+        <p style="font-size:13px; color:var(--text-dim);">Spécialisation : Nouveaux Acteurs de la Compétition Stratégique.</p>
       </div>
       <div class="card">
-        <p><strong>2021-2024 :</strong> Double licence Histoire / Géographie (Lyon-III). Mention Bien.</p>
+        <p><strong>Double Licence Histoire & Géographie</strong> | Université Lyon-III</p>
+        <p style="font-size:13px; color:var(--text-dim);">Mention Bien pour les deux cursus.</p>
       </div>
     </div>
 
@@ -247,5 +229,6 @@
       window.scrollTo(0, 0);
     }
   </script>
+
 </body>
 </html>
