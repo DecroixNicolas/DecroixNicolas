@@ -192,8 +192,9 @@
           </div>
           
           <div class="image-grid">
-            <img src="Carte-nationale.png" alt="Carte" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Vérifiez+le+nom:+Carte-nationale.png'">
-            <img src="Carte-Region.png" alt="Carte" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Vérifiez+le+nom:+Carte-Region.png'">
+            <img src="Carte-nationale.png" alt="Carte">
+            <img src="Carte-Region.png" alt="Carte">
+             <img src="Carte-Varmie.png" alt="Carte">
           </div>
         </div>
 
