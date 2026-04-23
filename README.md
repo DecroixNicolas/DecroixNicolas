@@ -78,7 +78,8 @@
   <header>
     <nav>
       <button class="nav-btn active" onclick="switchTab('home')">Présentation</button>
-      <button class="nav-btn" onclick="switchTab('exps')">Parcours</button>
+      <button class="nav-btn" onclick="switchTab('exps')">Expériences profesionnelles</button>
+      <button class="nav-btn" onclick="switchTab('exps')">Travaux en cours</button>
       <button class="nav-btn" onclick="switchTab('recherche')">Recherche & Engagements</button>
       <button class="nav-btn" onclick="switchTab('skills')">Compétences</button>
     </nav>
@@ -90,7 +91,7 @@
         <h1 style="font-size: 32px; color: var(--accent);">Nicolas Decroix</h1>
         <p style="font-size: 18px; color: var(--text-dim); margin: 10px 0 25px 0;">Analyste en Géopolitique & Nouveaux Acteurs</p>
         <p style="text-align: justify; max-width: 700px; margin: 0 auto; color: var(--text-main);">
-          Étudiant à l'Institut Français de Géopolitique (Paris-VIII), je me spécialise dans l'analyse des zones de tensions en Europe centrale et orientale. Mon travail se concentre sur les enjeux de militarisation frontalière, la veille OSINT et la cartographie décisionnelle.
+          Étudiant à l'Institut Français de Géopolitique (Paris-VIII), je me spécialise dans l'analyse de la sécurité dans l'espace de l'OTAN en Europe Centrale, Orientale et du Nord . Mon travail se concentre sur les enjeux de militarisation de l'OTAN face à la Russie, et ses conséquences sur les sociétés locales. 
         </p>
         <div style="margin-top: 30px;">
             <a href="mailto:decroix.nicolasfrancois@gmail.com" class="social-link">Email</a>
@@ -106,19 +107,30 @@
         <span class="date">Nov. 2024 — Présent | ERUA (Université Paris-VIII)</span>
         <ul style="margin-left: 20px; font-size: 14px;">
           <li>Rapports analytiques sur les politiques européennes d'éducation.</li>
-          <li>Appui logistique et stratégique aux comités de pilotage.</li>
-          <li>Réalisation de présentations et ateliers en anglais.</li>
+          <li>Création de présentations et d’ateliers de comité de pilotage .</li>
+          <li>Analyse assurance qualité et impact de l’alliance.</li>
+          <li>Organisation et vérification de conformité sur les bases de données collaboratives de l’alliance.</li>
+          <li>Réunions et productions réalisées intégralement en anglais à destination des partenaires européens.</li>
+          <li>Veille sur les évènements européens du secteur de l’éducation.</li>
         </ul>
       </div>
       <div class="card">
         <h3>Stagiaire Recherche - Programme 13-Novembre</h3>
         <span class="date">Juin 2023 — Juillet 2023 | CNRS - MATRICE</span>
-        <p style="font-size: 14px;">Transcription et analyse de témoignages dans un cadre de recherche scientifique à haute confidentialité.</p>
+         <ul style="margin-left: 20px; font-size: 14px;">
+          <li>Transcription de témoignages de victimes des attentats de 2015 en France (programme 13-Novembre) et de déportés français (MATRICE).</li>
+          <li>Suivi du vade-mecum de transcription./li>
+          <li>Respect des protocoles et de la clause de confidentialité.</li>
+        </ul>
       </div>
       <div class="card">
         <h3>Stagiaire Service Urbanisme</h3>
         <span class="date">Juin 2022 — Juillet 2022 | Mairie de Caluire-et-Cuire</span>
-        <p style="font-size: 14px;">Étude de faisabilité pour l'implantation d'énergie solaire via les outils SIG (ArcGIS/QGIS).</p>
+       <ul style="margin-left: 20px; font-size: 14px;">
+          <li>Travail de recherche pour l’implantation de mode de production d’énergie solaire sur la ville.</li>
+          <li>Rédaction de notes et rapports à destination du maire./li>
+          <li>Utilisation de systèmes d’information géographiques (SIG) : ArcGIS, QGIS.</li>
+        </ul>
       </div>
     </div>
 
