@@ -3,131 +3,227 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nicolas Decroix | Portfolio Géopolitique</title>
+  <title>Nicolas Decroix | Analyste Géopolitique</title>
   <style>
+    /* THÈME SOBRE ET PROFESSIONNEL */
     :root {
-      --bg-dark: #0f172a;
-      --sidebar-bg: #1e293b;
-      --accent-blue: #38bdf8;
-      --accent-pink: #f472b6;
-      --text-main: #f1f5f9;
-      --text-dim: #94a3b8;
+      --bg-body: #f8fafc;        /* Gris très clair */
+      --sidebar-bg: #0f172a;    /* Bleu nuit profond */
+      --sidebar-text: #94a3b8;
+      --accent-main: #334155;    /* Gris ardoise (au lieu du bleu/rose) */
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+      --border: #e2e8f0;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family: "Inter", -apple-system, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-dark);
+      line-height: 1.5;
+      overflow: hidden; /* Fixe la page pour l'effet dashboard */
     }
 
-    /* BOUTON MENU */
-    .menu-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1001;
-      background: var(--sidebar-bg);
-      border: 1px solid #334155;
-      padding: 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .menu-btn span { display: block; width: 22px; height: 2px; background: var(--accent-blue); }
-
-    /* SIDEBAR */
+    /* MENU LATÉRAL */
     .sidebar {
       position: fixed;
       top: 0;
-      left: -280px;
+      left: 0;
       width: 280px;
       height: 100%;
       background: var(--sidebar-bg);
-      z-index: 1000;
-      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      padding: 100px 20px 20px;
-      border-right: 1px solid #334155;
+      color: white;
+      padding: 40px 20px;
+      z-index: 100;
     }
-    .sidebar.open { left: 0; }
 
-    .nav-item {
+    .sidebar h1 { font-size: 22px; margin-bottom: 5px; color: white; }
+    .sidebar p { font-size: 12px; color: #38bdf8; text-transform: uppercase; margin-bottom: 40px; letter-spacing: 1px; }
+
+    .nav-btn {
       display: block;
       width: 100%;
-      padding: 14px 18px;
+      padding: 12px 15px;
       margin-bottom: 8px;
-      color: var(--text-dim);
+      color: var(--sidebar-text);
       background: transparent;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       text-align: left;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
       cursor: pointer;
+      transition: 0.2s;
     }
-    .nav-item.active { background: var(--bg-dark); color: var(--accent-blue); }
+    .nav-btn.active { background: #1e293b; color: white; }
+    .nav-btn:hover { color: white; }
 
-    /* CONTENU */
-    .content-area { padding: 60px 20px; max-width: 1100px; margin: 0 auto; transition: 0.4s; }
-    
-    .tab-pane { display: none; animation: fadeIn 0.4s; }
-    .tab-pane.active { display: block; }
+    /* ZONE PRINCIPALE */
+    .main-content {
+      margin-left: 280px;
+      height: 100vh;
+      padding: 40px;
+      overflow-y: auto;
+    }
 
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .tab-content { display: none; animation: fadeIn 0.3s ease; }
+    .tab-content.active { display: block; }
 
-    h2 { font-size: 24px; border-left: 4px solid var(--accent-pink); padding-left: 15px; margin-bottom: 30px; color: var(--accent-blue); }
-    
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    h2 { font-size: 20px; color: var(--text-dark); margin-bottom: 25px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+
+    /* CARTES D'EXPÉRIENCE */
     .card {
-      background: var(--sidebar-bg);
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 25px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
-    .exp-title { color: var(--accent-blue); font-size: 18px; margin-bottom: 5px; }
-    .exp-meta { color: var(--accent-pink); font-size: 13px; font-weight: bold; margin-bottom: 10px; display: block; }
-    
-    ul { margin-left: 20px; color: var(--text-dim); font-size: 14px; }
+    .card-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .job-title { font-weight: 700; color: var(--text-dark); font-size: 16px; }
+    .job-date { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+    .job-org { color: var(--text-muted); font-size: 14px; font-style: italic; margin-bottom: 10px; display: block; }
+
+    ul { margin-left: 20px; color: var(--text-muted); font-size: 13.5px; }
     li { margin-bottom: 5px; }
 
-    .lang-list { list-style: none; margin-left: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
-    .lang-item { background: var(--bg-dark); padding: 10px; border-radius: 6px; border: 1px solid #334155; text-align: center; }
+    /* LISTE LANGUES */
+    .lang-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+    .lang-box { border: 1px solid var(--border); padding: 10px; border-radius: 4px; text-align: center; background: white; font-size: 13px; }
 
-    .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 999; }
-    .overlay.active { display: block; }
+    /* IFRAME MÉMOIRE */
+    .pdf-viewer { width: 100%; height: 75vh; border: 1px solid var(--border); border-radius: 4px; }
+
+    @media (max-width: 1024px) {
+      .sidebar { width: 100%; height: auto; position: relative; padding: 20px; }
+      .main-content { margin-left: 0; padding: 20px; height: auto; overflow: visible; }
+      body { overflow-y: auto; }
+    }
   </style>
 </head>
-<body id="mainBody">
+<body>
 
-  <button class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-
-  <nav class="sidebar" id="sidebar">
-    <button class="nav-item active" onclick="switchTab(event, 'exps')">💼 Expériences</button>
-    <button class="nav-item" onclick="switchTab(event, 'parcours')">🎓 Cursus</button>
-    <button class="nav-item" onclick="switchTab(event, 'skills')">🛠 Compétences</button>
-    <button class="nav-item" onclick="switchTab(event, 'recherche')">📚 Recherche</button>
-  </nav>
-
-  <main class="content-area">
+  <aside class="sidebar">
+    <h1>Nicolas Decroix</h1>
+    <p>Analyste Géopolitique</p>
     
-    <div id="exps" class="tab-pane active">
-      <h2>Expériences Professionnelles</h2>
+    <nav>
+      <button class="nav-btn active" onclick="showTab(event, 'experience')">💼 Expériences & Stages</button>
+      <button class="nav-btn" onclick="showTab(event, 'education')">🎓 Formation</button>
+      <button class="nav-btn" onclick="showTab(event, 'skills')">🛠 Compétences</button>
+      <button class="nav-btn" onclick="showTab(event, 'research')">📚 Recherche (M1)</button>
+    </nav>
+
+    <div style="position: absolute; bottom: 20px; font-size: 11px; color: var(--sidebar-text);">
+      📍 Paris, France<br>
+      📧 decroix.nicolasfrancois@gmail.com
+    </div>
+  </aside>
+
+  <main class="main-content">
+    
+    <div id="experience" class="tab-content active">
+      <h2>Parcours Professionnel</h2>
       
       <div class="card">
-        <span class="exp-meta">Novembre 2024 — Décembre 2025</span>
-        <h3 class="exp-title">Student Assistant to the Secretary General</h3>
-        <p style="font-size: 14px; margin-bottom: 10px;"><strong>European Reform Universities Alliance (ERUA)</strong> - Université Paris-VIII</p>
+        <div class="card-header">
+          <span class="job-title">Student Assistant to the Secretary General</span>
+          <span class="job-date">2024 — 2025</span>
+        </div>
+        <span class="job-org">European Reform Universities Alliance (ERUA) - Paris-VIII</span>
         <ul>
-          <li>Rapports analytiques de documents européens sur l'éducation pour la secrétaire générale</li>
-          <li>Création de présentations et d'ateliers de comité de pilotage</li>
-          <li>Analyse d'assurance qualité et d'impact de l'alliance</li>
-          <li>Organisation et vérification de conformité sur les bases de données collaboratives</li>
-          <li>Réunions et productions réalisées intégralement en anglais à destination des partenaires européens</li>
-          <li>Veille sur les évèn
+          <li>Analyses stratégiques de documents européens sur l'éducation.</li>
+          <li>Conception de supports pour comités de pilotage et ateliers.</li>
+          <li>Analyses d'impact et d'assurance qualité de l'alliance.</li>
+          <li>Travail intégral en anglais (C2) pour un environnement international.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="job-title">Stagiaire Recherche (Programme 13-Novembre)</span>
+          <span class="job-date">ÉTÉ 2023</span>
+        </div>
+        <span class="job-org">CNRS - Equipex MATRICE</span>
+        <ul>
+          <li>Transcription de témoignages (attentats de 2015 / déportés).</li>
+          <li>Traitement rigoureux de données sensibles sous clause de confidentialité.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="job-title">Stagiaire Urbanisme & Énergie</span>
+          <span class="job-date">ÉTÉ 2022</span>
+        </div>
+        <span class="job-org">Mairie de Caluire-et-Cuire</span>
+        <ul>
+          <li>Étude d'implantation de production d'énergie solaire.</li>
+          <li>Maîtrise opérationnelle des SIG : <strong>ArcGIS, QGIS</strong>.</li>
+          <li>Rédaction de notes de synthèse pour l'exécutif local.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="education" class="tab-content">
+      <h2>Formation Académique</h2>
+      <div class="card">
+        <span class="job-date">2024 — 2026</span>
+        <p><strong>Master de Géopolitique</strong> - Institut Français de Géopolitique (IFG)</p>
+        <p style="font-size: 13px; color: var(--text-muted)">Spécialisation Nouveaux Acteurs de la Compétition Stratégique.</p>
+      </div>
+      <div class="card">
+        <span class="job-date">2021 — 2024</span>
+        <p><strong>Double Licence Histoire / Géographie</strong> - Université Lyon-III</p>
+        <p style="font-size: 13px; color: var(--text-muted)">Mention Bien pour les deux cursus.</p>
+      </div>
+    </div>
+
+    <div id="skills" class="tab-content">
+      <h2>Compétences Techniques & Linguistiques</h2>
+      <div class="card">
+        <h3 style="font-size: 14px; margin-bottom: 15px;">Langues Étrangères</h3>
+        <div class="lang-list">
+          <div class="lang-box"><strong>Français</strong> (Maternel)</div>
+          <div class="lang-box"><strong>Anglais</strong> (C2)</div>
+          <div class="lang-box"><strong>Polonais</strong> (B1-B2)</div>
+          <div class="lang-box"><strong>Espagnol</strong> (B1)</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="font-size: 14px; margin-bottom: 10px;">Expertises</h3>
+        <ul>
+          <li>Cartographie & SIG : QGIS, ArcGIS, Adobe Illustrator.</li>
+          <li>Veille informationnelle & OSINT.</li>
+          <li>Analyse de risques géopolitiques.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="research" class="tab-content">
+      <h2>Travaux de Recherche</h2>
+      <div class="card">
+        <p style="margin-bottom: 15px;"><strong>Mémoire M1 :</strong> La militarisation de la frontière russo-polonaise avec Kaliningrad (Note : 17/20).</p>
+        <iframe class="pdf-viewer" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function showTab(evt, tabId) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
