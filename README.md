@@ -99,16 +99,40 @@
       margin-bottom: 30px;
     }
 
-    /* SKILLS VISUELS */
-    .skill-bar-container { margin-bottom: 15px; }
-    .skill-label { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 5px; }
-    .skill-bar { height: 8px; background: var(--bg-dark); border-radius: 4px; overflow: hidden; }
-    .skill-progress { height: 100%; background: var(--accent); border-radius: 4px; }
+    /* SKILLS VISUELS (SANS POURCENTAGES) */
+    .skill-tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .skill-tag { 
+        background: var(--bg-dark); 
+        border: 1px solid var(--accent); 
+        color: var(--text-main); 
+        padding: 8px 15px; 
+        border-radius: 20px; 
+        font-size: 13px;
+        font-weight: 600;
+    }
 
-    /* PROJETS LAYOUT */
-    .project-section { margin-bottom: 40px; }
-    .pdf-frame { width: 100%; height: 700px; border-radius: 8px; border: 1px solid var(--border); background: #000; }
+    /* PROJETS RECHERCHE : LAYOUT PDF + IMAGES */
+    .research-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 50/50 pour le mémoire et les cartes */
+        gap: 20px;
+        align-items: start;
+    }
+    .pdf-frame { width: 100%; height: 500px; border-radius: 8px; border: 1px solid var(--border); background: #000; }
     
+    .image-gallery { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    .image-gallery img { 
+        width: 100%; 
+        border-radius: 6px; 
+        border: 1px solid var(--border);
+        transition: 0.3s;
+    }
+    .image-gallery img:hover { transform: scale(1.02); border-color: var(--accent); }
+
     .engagement-item {
       padding: 15px;
       border-left: 2px solid var(--border);
@@ -120,6 +144,7 @@
       body { padding-left: 0; }
       .sidebar { width: 100%; height: auto; position: relative; }
       .main-content { padding: 30px 20px; }
+      .research-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -194,7 +219,18 @@
         <h3>1. Recherche Académique</h3>
         <div class="card">
           <p style="margin-bottom: 20px;"><strong>Mémoire M1 :</strong> La militarisation de la frontière russo-polonaise avec Kaliningrad (Note : 17/20).</p>
-          <iframe class="pdf-frame" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+          
+          <div class="research-container">
+            <div>
+              <iframe class="pdf-frame" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+            </div>
+            <div class="image-gallery">
+              <img src="Carte-nationale.png" alt="Carte 1">
+              <img src="Carte-Region.png" alt="Carte 2">
+              <img src="Carte-Varmie.png" alt="Carte 3">
+              <p style="font-size:11px; color:var(--text-dim); text-align:center;">Extraits cartographiques réalisés sur QGIS</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -218,25 +254,12 @@
       
       <div class="card">
         <h3>Compétences Techniques</h3>
-        
-        <div class="skill-bar-container">
-          <div class="skill-label"><span>Cartographie (QGIS / ArcGIS)</span><span>90%</span></div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-        </div>
-
-        <div class="skill-bar-container">
-          <div class="skill-label"><span>Analyse Géopolitique & Veille OSINT</span><span>85%</span></div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-        </div>
-
-        <div class="skill-bar-container">
-          <div class="skill-label"><span>Adobe Illustrator (Design Carto)</span><span>75%</span></div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-        </div>
-
-        <div class="skill-bar-container">
-          <div class="skill-label"><span>Suite Office</span><span>95%</span></div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+        <div class="skill-tag-container">
+            <div class="skill-tag">Cartographie (QGIS / ArcGIS)</div>
+            <div class="skill-tag">Analyse Géopolitique</div>
+            <div class="skill-tag">Veille OSINT</div>
+            <div class="skill-tag">Adobe Illustrator</div>
+            <div class="skill-tag">Suite Office</div>
         </div>
       </div>
 
