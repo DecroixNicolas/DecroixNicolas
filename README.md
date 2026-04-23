@@ -91,7 +91,7 @@
         <h1 style="font-size: 32px; color: var(--accent);">Nicolas Decroix</h1>
         <p style="font-size: 18px; color: var(--text-dim); margin: 10px 0 25px 0;">Analyste en Géopolitique & Nouveaux Acteurs</p>
         <p style="text-align: justify; max-width: 700px; margin: 0 auto; color: var(--text-main);">
-          Étudiant à l'Institut Français de Géopolitique (Paris-VIII), je me spécialise dans l'analyse de la sécurité dans l'espace de l'OTAN en Europe Centrale, Orientale et du Nord . Mon travail se concentre sur les enjeux de militarisation de l'OTAN face à la Russie, et ses conséquences sur les sociétés locales. 
+          Étudiant à l'Institut Français de Géopolitique (Paris-VIII), je me spécialise dans l'analyse de la sécurité dans l'espace de l'OTAN en Europe Centrale, Orientale et du Nord. Mon travail se concentre sur les enjeux de militarisation des pays du Flanc Est de l'OTAN face à la Russie, les dynamiques frontalières sur ces espaces ainsi que leurs conséquences sur la société civile. 
         </p>
         <div style="margin-top: 30px;">
             <a href="mailto:decroix.nicolasfrancois@gmail.com" class="social-link">Email</a>
@@ -114,6 +114,7 @@
           <li>Veille sur les évènements européens du secteur de l’éducation.</li>
         </ul>
       </div>
+      
       <div class="card">
         <h3>Stagiaire Recherche - Programme 13-Novembre</h3>
         <span class="date">Juin 2023 — Juillet 2023 | CNRS - MATRICE</span>
@@ -123,6 +124,7 @@
           <li>Respect des protocoles et de la clause de confidentialité.</li>
         </ul>
       </div>
+      
       <div class="card">
         <h3>Stagiaire Service Urbanisme</h3>
         <span class="date">Juin 2022 — Juillet 2022 | Mairie de Caluire-et-Cuire</span>
