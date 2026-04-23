@@ -13,6 +13,7 @@
       --text-main: #f1f5f9;
       --text-dim: #94a3b8;
       --border: #334155;
+      --sidebar-width: 280px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,15 +23,17 @@
       background-color: var(--bg-dark);
       color: var(--text-main);
       line-height: 1.6;
-      overflow: hidden; /* Fixe la structure globale */
+      /* On décale tout le corps de la page pour laisser la place à la sidebar */
+      padding-left: var(--sidebar-width); 
+      min-height: 100vh;
     }
 
-    /* SIDEBAR CORRIGÉE */
+    /* SIDEBAR FIXE À GAUCHE */
     .sidebar {
       position: fixed;
       top: 0;
       left: 0;
-      width: 280px;
+      width: var(--sidebar-width);
       height: 100vh;
       background: var(--sidebar-bg);
       padding: 40px 20px;
@@ -75,57 +78,56 @@
     }
     .linkedin-link:hover { background: var(--accent); color: var(--bg-dark); }
 
-    /* CONTENU PRINCIPAL AVEC MARGE DE SÉCURITÉ */
+    /* CONTENU PRINCIPAL - DÉFILEMENT GLOBAL */
     .main-content {
-      margin-left: 280px;
-      height: 100vh;
-      overflow-y: auto;
-      padding: 40px 40px 120px 40px; /* 120px en bas pour éviter que le texte soit caché */
+      padding: 60px 50px 100px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .tab-pane { display: none; }
     .tab-pane.active { display: block; animation: fadeIn 0.4s ease; }
 
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    h2 { font-size: 24px; margin-bottom: 30px; border-left: 4px solid var(--accent); padding-left: 15px; color: var(--text-main); }
+    h2 { font-size: 26px; margin-bottom: 35px; border-left: 4px solid var(--accent); padding-left: 15px; color: var(--text-main); }
 
     /* CARTES */
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 25px;
-      margin-bottom: 25px;
+      padding: 30px;
+      margin-bottom: 30px;
     }
 
     .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
-    .exp-title { font-weight: 700; color: var(--accent); font-size: 18px; }
+    .exp-title { font-weight: 700; color: var(--accent); font-size: 19px; }
     .exp-date { font-size: 11px; color: var(--text-dim); font-weight: bold; text-transform: uppercase; }
-    .exp-org { color: var(--text-main); font-size: 15px; font-weight: 600; margin-bottom: 15px; display: block; }
+    .exp-org { color: var(--text-main); font-size: 16px; font-weight: 600; margin-bottom: 15px; display: block; }
 
-    ul { margin-left: 20px; color: var(--text-dim); font-size: 14px; }
-    li { margin-bottom: 8px; }
+    ul { margin-left: 20px; color: var(--text-dim); font-size: 14.5px; }
+    li { margin-bottom: 10px; }
 
-    /* LANGUES BADGES */
-    .lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
-    .lang-badge { background: var(--bg-dark); border: 1px solid var(--border); padding: 10px; border-radius: 6px; text-align: center; }
+    /* LANGUES */
+    .lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 15px; }
+    .lang-badge { background: var(--bg-dark); border: 1px solid var(--border); padding: 12px; border-radius: 6px; text-align: center; }
     .lang-level { color: var(--accent); font-weight: bold; font-size: 12px; display: block; }
 
     /* SECTION MÉMOIRE */
-    .pdf-frame { width: 100%; height: 600px; border-radius: 8px; border: 1px solid var(--border); background: #000; }
+    .pdf-frame { width: 100%; height: 800px; border-radius: 8px; border: 1px solid var(--border); background: #000; margin-bottom: 30px;}
     .image-gallery { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-      gap: 15px; 
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px; 
     }
-    .image-gallery img { width: 100%; border-radius: 6px; border: 1px solid var(--border); cursor: zoom-in; }
+    .image-gallery img { width: 100%; border-radius: 6px; border: 1px solid var(--border); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
-      .sidebar { width: 100%; height: auto; position: relative; }
-      .main-content { margin-left: 0; padding: 20px; height: auto; overflow: visible; }
-      body { overflow-y: auto; }
+      body { padding-left: 0; }
+      .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
+      .main-content { padding: 30px 20px; }
     }
   </style>
 </head>
@@ -166,7 +168,7 @@
           <li>Création de présentations et d'ateliers de comité de pilotage.</li>
           <li>Analyse d'assurance qualité et d'impact de l'alliance.</li>
           <li>Organisation et vérification de conformité sur les bases de données collaboratives.</li>
-          <li>Réunions et productions réalisées intégralement en anglais à destination des partenaires européens.</li>
+          <li>Productions réalisées intégralement en anglais pour les partenaires européens.</li>
           <li>Veille sur les évènements européens du secteur de l'éducation.</li>
         </ul>
       </div>
@@ -201,14 +203,15 @@
     <div id="recherche" class="tab-pane">
       <h2>Mémoire de Recherche M1</h2>
       <div class="card">
-        <p style="margin-bottom: 20px;"><strong>Sujet :</strong> La militarisation de la frontière russo-polonaise avec Kaliningrad (Note : 17/20).</p>
+        <p style="margin-bottom: 25px;"><strong>Sujet :</strong> La militarisation de la frontière russo-polonaise avec Kaliningrad (Note : 17/20).</p>
+        
         <iframe class="pdf-frame" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
         
-        <h3 style="color:var(--accent); margin-top:30px; font-size:16px;">Cartographie SIG (Extraits)</h3>
+        <h3 style="color:var(--accent); margin-bottom:20px; font-size:18px;">Extraits Cartographiques (SIG)</h3>
         <div class="image-gallery">
-          <img src="Carte-nationale.png" alt="Analyse nationale">
-          <img src="Carte-Region.png" alt="Analyse régionale">
-          <img src="Carte-Varmie.png" alt="Analyse locale">
+          <img src="Carte-nationale.png" alt="Carte 1">
+          <img src="Carte-Region.png" alt="Carte 2">
+          <img src="Carte-Varmie.png" alt="Carte 3">
         </div>
       </div>
     </div>
@@ -217,7 +220,7 @@
       <h2>Compétences & Publications</h2>
       
       <div class="card">
-        <h3 style="color:var(--accent); margin-bottom:15px; font-size:16px;">Langues</h3>
+        <h3 style="color:var(--accent); margin-bottom:15px;">Maîtrise des Langues</h3>
         <div class="lang-grid">
           <div class="lang-badge">Français<span class="lang-level">Maternel</span></div>
           <div class="lang-badge">Anglais<span class="lang-level">C2 (Bilingue)</span></div>
@@ -227,21 +230,21 @@
       </div>
 
       <div class="card">
-        <h3 style="color:var(--accent); margin-bottom:15px; font-size:16px;">Expertises Techniques</h3>
+        <h3 style="color:var(--accent); margin-bottom:15px;">Expertises Techniques</h3>
         <ul>
           <li>Analyse géopolitique et Veille OSINT.</li>
           <li>Cartographie : <strong>QGIS</strong> et <strong>Adobe Illustrator</strong>.</li>
           <li>Systèmes d'Information Géographique : <strong>ArcGIS</strong>.</li>
-          <li>Expertise Suite Office.</li>
+          <li>Maîtrise experte de la Suite Office.</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3 style="color:var(--accent); margin-bottom:15px; font-size:16px;">Extrascolaire & Publications</h3>
+        <h3 style="color:var(--accent); margin-bottom:15px;">Publications & Engagements</h3>
         <ul>
-          <li><strong>Diploweb.com</strong> : Rédaction d'un article de géopolitique sous la direction de Pierre Verluise (2025).</li>
-          <li><strong>Université de Varsovie</strong> : Présentation d'ouvrage lors d'un séminaire de l'Office Français (2025).</li>
-          <li><strong>666 Albums Metal</strong> : Rédaction d'une chronique pour l'encyclopédie éditée par le Nouveau Monde.</li>
+          <li><strong>Diploweb.com</strong> : Rédaction d'un article de géopolitique (dir. P. Verluise, 2025).</li>
+          <li><strong>Université de Varsovie</strong> : Présentation lors du séminaire de l'Office Français (2025).</li>
+          <li><strong>666 Albums Metal</strong> : Rédaction d'une chronique pour l'encyclopédie (Nouveau Monde).</li>
         </ul>
       </div>
     </div>
@@ -270,15 +273,22 @@
 
   <script>
     function switchTab(tabId) {
+      // Masquer tous les onglets
       document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      // Désactiver tous les boutons
       document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
 
-      document.getElementById(tabId).classList.add('active');
+      // Afficher l'onglet cible
+      const target = document.getElementById(tabId);
+      if(target) target.classList.add('active');
       
-      const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      // Activer le bouton correspondant
+      const activeBtn = Array.from(document.querySelectorAll('.nav-btn'))
+                             .find(b => b.getAttribute('onclick').includes(tabId));
       if (activeBtn) activeBtn.classList.add('active');
 
-      document.querySelector('.main-content').scrollTop = 0;
+      // Remonter en haut de la page lors du changement
+      window.scrollTo(0, 0);
     }
   </script>
 
