@@ -191,7 +191,7 @@
     <h2>💼 Expériences</h2>
     <div class="skills-bar" style="grid-template-columns: 1fr 1fr; border-bottom: none;">
       <div class="skill-tag" style="text-align: left;">
-        <span style="color: #f472b6; font-size: 12px; font-weight: bold;">2024 — PRÉSENT</span>
+        <span style="color: #f472b6; font-size: 12px; font-weight: bold;">Novembre 2024 — Décembre 2025</span>
         <strong>Assistant de la Secrétaire Générale</strong>
         <p style="font-size: 13px;">ERUA (Paris-VIII) : Analyses et rapports en anglais (C2).</p>
       </div>
