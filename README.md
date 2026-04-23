@@ -137,4 +137,150 @@
     
     <nav>
       <button class="nav-btn active" onclick="switchTab('exps')">💼 Parcours & Stages</button>
-      <button class="nav-btn" onclick="switchTab('recherche')">📚
+      <button class="nav-btn" onclick="switchTab('recherche')">📚 Mémoire & Cartes</button>
+      <button class="nav-btn" onclick="switchTab('skills')">🛠 Compétences & Pubs</button>
+      <button class="nav-btn" onclick="switchTab('formation')">🎓 Formation</button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p style="font-size: 11px; color: var(--text-dim); margin-bottom: 15px;">
+        ✉️ decroix.nicolasfrancois@gmail.com
+      </p>
+      <a href="https://www.linkedin.com/in/nicolas-decroix-805218222/" target="_blank" class="linkedin-link">LinkedIn ↗</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    
+    <div id="exps" class="tab-pane active">
+      <h2>Parcours Professionnel & Stages</h2>
+      
+      <div class="card">
+        <div class="exp-header">
+          <span class="exp-title">Student Assistant to the Secretary General</span>
+          <span class="exp-date">Nov. 2024 — Déc. 2025</span>
+        </div>
+        <span class="exp-org">European Reform Universities Alliance (ERUA) - Paris-VIII</span>
+        <ul>
+          <li>Rapports analytiques de documents européens sur l'éducation pour la secrétaire générale.</li>
+          <li>Création de présentations et d'ateliers de comité de pilotage.</li>
+          <li>Analyse d'assurance qualité et d'impact de l'alliance.</li>
+          <li>Organisation et vérification de conformité sur les bases de données collaboratives.</li>
+          <li>Réunions et productions réalisées intégralement en anglais à destination des partenaires européens.</li>
+          <li>Veille sur les évènements européens du secteur de l'éducation.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="exp-header">
+          <span class="exp-title">Stagiaire Recherche (Programme 13-Novembre)</span>
+          <span class="exp-date">Juillet — Août 2023</span>
+        </div>
+        <span class="exp-org">CNRS - Equipex MATRICE</span>
+        <ul>
+          <li>Transcription de témoignages de victimes des attentats de 2015 en France et de déportés français.</li>
+          <li>Suivi rigoureux du vade-mecum de transcription.</li>
+          <li>Respect strict des protocoles et de la clause de confidentialité.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="exp-header">
+          <span class="exp-title">Stagiaire au service Urbanisme</span>
+          <span class="exp-date">Juillet — Août 2022</span>
+        </div>
+        <span class="exp-org">Mairie de Caluire-et-Cuire</span>
+        <ul>
+          <li>Travail de recherche pour l'implantation de mode de production d'énergie solaire sur la ville.</li>
+          <li>Rédaction de notes et rapports à destination du maire.</li>
+          <li>Utilisation intensive de SIG : <strong>ArcGIS, QGIS</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="recherche" class="tab-pane">
+      <h2>Mémoire de Recherche M1</h2>
+      <div class="card">
+        <p style="margin-bottom: 20px;"><strong>Sujet :</strong> La militarisation de la frontière russo-polonaise avec Kaliningrad (Note : 17/20).</p>
+        <iframe class="pdf-frame" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+        
+        <h3 style="color:var(--accent); margin-top:30px; font-size:16px;">Cartographie SIG (Extraits)</h3>
+        <div class="image-gallery">
+          <img src="Carte-nationale.png" alt="Analyse nationale">
+          <img src="Carte-Region.png" alt="Analyse régionale">
+          <img src="Carte-Varmie.png" alt="Analyse locale">
+        </div>
+      </div>
+    </div>
+
+    <div id="skills" class="tab-pane">
+      <h2>Compétences & Publications</h2>
+      
+      <div class="card">
+        <h3 style="color:var(--accent); margin-bottom:15px; font-size:16px;">Langues</h3>
+        <div class="lang-grid">
+          <div class="lang-badge">Français<span class="lang-level">Maternel</span></div>
+          <div class="lang-badge">Anglais<span class="lang-level">C2 (Bilingue)</span></div>
+          <div class="lang-badge">Polonais<span class="lang-level">B1-B2</span></div>
+          <div class="lang-badge">Espagnol<span class="lang-level">B1</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--accent); margin-bottom:15px; font-size:16px;">Expertises Techniques</h3>
+        <ul>
+          <li>Analyse géopolitique et Veille OSINT.</li>
+          <li>Cartographie : <strong>QGIS</strong> et <strong>Adobe Illustrator</strong>.</li>
+          <li>Systèmes d'Information Géographique : <strong>ArcGIS</strong>.</li>
+          <li>Expertise Suite Office.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--accent); margin-bottom:15px; font-size:16px;">Extrascolaire & Publications</h3>
+        <ul>
+          <li><strong>Diploweb.com</strong> : Rédaction d'un article de géopolitique sous la direction de Pierre Verluise (2025).</li>
+          <li><strong>Université de Varsovie</strong> : Présentation d'ouvrage lors d'un séminaire de l'Office Français (2025).</li>
+          <li><strong>666 Albums Metal</strong> : Rédaction d'une chronique pour l'encyclopédie éditée par le Nouveau Monde.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="formation" class="tab-pane">
+      <h2>Cursus Académique</h2>
+      <div class="card">
+        <div class="exp-header">
+          <span class="exp-title">Master de Géopolitique</span>
+          <span class="exp-date">2024 — 2026</span>
+        </div>
+        <span class="exp-org">IFG - Université Paris-VIII</span>
+        <p style="font-size:14px; color:var(--text-dim);">Spécialisation : Nouveaux Acteurs de la Compétition Stratégique.</p>
+      </div>
+      <div class="card">
+        <div class="exp-header">
+          <span class="exp-title">Double Licence Histoire / Géographie</span>
+          <span class="exp-date">2021 — 2024</span>
+        </div>
+        <span class="exp-org">Université Jean Moulin Lyon-III</span>
+        <p style="font-size:14px; color:var(--text-dim);">Mention Bien pour les deux licences.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      
+      const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (activeBtn) activeBtn.classList.add('active');
+
+      document.querySelector('.main-content').scrollTop = 0;
+    }
+  </script>
+
+</body>
+</html>
