@@ -23,12 +23,11 @@
       background-color: var(--bg-dark);
       color: var(--text-main);
       line-height: 1.6;
-      /* On décale tout le corps de la page pour laisser la place à la sidebar */
       padding-left: var(--sidebar-width); 
       min-height: 100vh;
     }
 
-    /* SIDEBAR FIXE À GAUCHE */
+    /* SIDEBAR */
     .sidebar {
       position: fixed;
       top: 0;
@@ -76,9 +75,8 @@
       border-radius: 4px;
       transition: 0.3s;
     }
-    .linkedin-link:hover { background: var(--accent); color: var(--bg-dark); }
 
-    /* CONTENU PRINCIPAL - DÉFILEMENT GLOBAL */
+    /* CONTENU */
     .main-content {
       padding: 60px 50px 100px 50px;
       max-width: 1200px;
@@ -90,9 +88,9 @@
 
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    h2 { font-size: 26px; margin-bottom: 35px; border-left: 4px solid var(--accent); padding-left: 15px; color: var(--text-main); }
+    h2 { font-size: 26px; margin-bottom: 35px; border-left: 4px solid var(--accent); padding-left: 15px; }
+    h3 { font-size: 18px; margin: 25px 0 15px 0; color: var(--accent); }
 
-    /* CARTES */
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -101,32 +99,26 @@
       margin-bottom: 30px;
     }
 
-    .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
-    .exp-title { font-weight: 700; color: var(--accent); font-size: 19px; }
-    .exp-date { font-size: 11px; color: var(--text-dim); font-weight: bold; text-transform: uppercase; }
-    .exp-org { color: var(--text-main); font-size: 16px; font-weight: 600; margin-bottom: 15px; display: block; }
+    /* SKILLS VISUELS */
+    .skill-bar-container { margin-bottom: 15px; }
+    .skill-label { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 5px; }
+    .skill-bar { height: 8px; background: var(--bg-dark); border-radius: 4px; overflow: hidden; }
+    .skill-progress { height: 100%; background: var(--accent); border-radius: 4px; }
 
-    ul { margin-left: 20px; color: var(--text-dim); font-size: 14.5px; }
-    li { margin-bottom: 10px; }
-
-    /* LANGUES */
-    .lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 15px; }
-    .lang-badge { background: var(--bg-dark); border: 1px solid var(--border); padding: 12px; border-radius: 6px; text-align: center; }
-    .lang-level { color: var(--accent); font-weight: bold; font-size: 12px; display: block; }
-
-    /* SECTION MÉMOIRE */
-    .pdf-frame { width: 100%; height: 800px; border-radius: 8px; border: 1px solid var(--border); background: #000; margin-bottom: 30px;}
-    .image-gallery { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-      gap: 20px; 
+    /* PROJETS LAYOUT */
+    .project-section { margin-bottom: 40px; }
+    .pdf-frame { width: 100%; height: 700px; border-radius: 8px; border: 1px solid var(--border); background: #000; }
+    
+    .engagement-item {
+      padding: 15px;
+      border-left: 2px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      margin-bottom: 15px;
     }
-    .image-gallery img { width: 100%; border-radius: 6px; border: 1px solid var(--border); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 
-    /* RESPONSIVE */
     @media (max-width: 1024px) {
       body { padding-left: 0; }
-      .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
+      .sidebar { width: 100%; height: auto; position: relative; }
       .main-content { padding: 30px 20px; }
     }
   </style>
@@ -139,8 +131,8 @@
     
     <nav>
       <button class="nav-btn active" onclick="switchTab('exps')">💼 Parcours & Stages</button>
-      <button class="nav-btn" onclick="switchTab('recherche')">📚 Mémoire & Cartes</button>
-      <button class="nav-btn" onclick="switchTab('skills')">🛠 Compétences & Pubs</button>
+      <button class="nav-btn" onclick="switchTab('projets')">🚀 Projets & Recherche</button>
+      <button class="nav-btn" onclick="switchTab('skills')">🛠 Compétences</button>
       <button class="nav-btn" onclick="switchTab('formation')">🎓 Formation</button>
     </nav>
 
@@ -156,116 +148,124 @@
     
     <div id="exps" class="tab-pane active">
       <h2>Parcours Professionnel & Stages</h2>
-      
       <div class="card">
-        <div class="exp-header">
-          <span class="exp-title">Student Assistant to the Secretary General</span>
-          <span class="exp-date">Nov. 2024 — Déc. 2025</span>
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+          <span style="font-weight:700; color:var(--accent); font-size:18px;">Student Assistant to the Secretary General</span>
+          <span style="font-size:11px; color:var(--text-dim); font-weight:bold;">Nov. 2024 — Déc. 2025</span>
         </div>
-        <span class="exp-org">European Reform Universities Alliance (ERUA) - Paris-VIII</span>
+        <span style="color:var(--text-main); font-weight:600; margin-bottom:15px; display:block;">ERUA - Université Paris-VIII</span>
         <ul>
-          <li>Rapports analytiques de documents européens sur l'éducation pour la secrétaire générale.</li>
+          <li>Rapports analytiques de documents européens sur l'éducation.</li>
           <li>Création de présentations et d'ateliers de comité de pilotage.</li>
           <li>Analyse d'assurance qualité et d'impact de l'alliance.</li>
-          <li>Organisation et vérification de conformité sur les bases de données collaboratives.</li>
-          <li>Productions réalisées intégralement en anglais pour les partenaires européens.</li>
-          <li>Veille sur les évènements européens du secteur de l'éducation.</li>
+          <li>Productions réalisées intégralement en anglais.</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="exp-header">
-          <span class="exp-title">Stagiaire Recherche (Programme 13-Novembre)</span>
-          <span class="exp-date">Juillet — Août 2023</span>
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+          <span style="font-weight:700; color:var(--accent); font-size:18px;">Stagiaire Recherche (Programme 13-Novembre)</span>
+          <span style="font-size:11px; color:var(--text-dim); font-weight:bold;">ÉTÉ 2023</span>
         </div>
-        <span class="exp-org">CNRS - Equipex MATRICE</span>
+        <span style="color:var(--text-main); font-weight:600; margin-bottom:15px; display:block;">CNRS - Equipex MATRICE</span>
         <ul>
-          <li>Transcription de témoignages de victimes des attentats de 2015 en France et de déportés français.</li>
-          <li>Suivi rigoureux du vade-mecum de transcription.</li>
-          <li>Respect strict des protocoles et de la clause de confidentialité.</li>
+          <li>Transcription de témoignages (attentats de 2015 / déportés).</li>
+          <li>Respect rigoureux des clauses de confidentialité.</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="exp-header">
-          <span class="exp-title">Stagiaire au service Urbanisme</span>
-          <span class="exp-date">Juillet — Août 2022</span>
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+          <span style="font-weight:700; color:var(--accent); font-size:18px;">Stagiaire au service Urbanisme</span>
+          <span style="font-size:11px; color:var(--text-dim); font-weight:bold;">ÉTÉ 2022</span>
         </div>
-        <span class="exp-org">Mairie de Caluire-et-Cuire</span>
+        <span style="color:var(--text-main); font-weight:600; margin-bottom:15px; display:block;">Mairie de Caluire-et-Cuire</span>
         <ul>
-          <li>Travail de recherche pour l'implantation de mode de production d'énergie solaire sur la ville.</li>
-          <li>Rédaction de notes et rapports à destination du maire.</li>
-          <li>Utilisation intensive de SIG : <strong>ArcGIS, QGIS</strong>.</li>
+          <li>Recherche pour l'implantation de mode de production d'énergie solaire.</li>
+          <li>Utilisation intensive de SIG : ArcGIS, QGIS.</li>
         </ul>
       </div>
     </div>
 
-    <div id="recherche" class="tab-pane">
-      <h2>Mémoire de Recherche M1</h2>
-      <div class="card">
-        <p style="margin-bottom: 25px;"><strong>Sujet :</strong> La militarisation de la frontière russo-polonaise avec Kaliningrad (Note : 17/20).</p>
-        
-        <iframe class="pdf-frame" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
-        
-        <h3 style="color:var(--accent); margin-bottom:20px; font-size:18px;">Extraits Cartographiques (SIG)</h3>
-        <div class="image-gallery">
-          <img src="Carte-nationale.png" alt="Carte 1">
-          <img src="Carte-Region.png" alt="Carte 2">
-          <img src="Carte-Varmie.png" alt="Carte 3">
+    <div id="projets" class="tab-pane">
+      <h2>Projets & Travaux</h2>
+      
+      <div class="project-section">
+        <h3>1. Recherche Académique</h3>
+        <div class="card">
+          <p style="margin-bottom: 20px;"><strong>Mémoire M1 :</strong> La militarisation de la frontière russo-polonaise avec Kaliningrad (Note : 17/20).</p>
+          <iframe class="pdf-frame" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>2. Activités & Engagements</h3>
+        <div class="card">
+          <div class="engagement-item">
+            <p><strong>Séminaire de l'Office Français (Varsovie)</strong></p>
+            <p style="font-size:13px; color:var(--text-dim);">Présentation d'ouvrage lors d'un séminaire de lecture à l'Université de Varsovie (Août 2025).</p>
+          </div>
+          <div class="engagement-item">
+            <p><strong>Contribution Encyclopédique - 666 Albums Metal</strong></p>
+            <p style="font-size:13px; color:var(--text-dim);">Rédaction d'une chronique d'album pour l'ouvrage publié aux Éditions du Nouveau Monde.</p>
+          </div>
         </div>
       </div>
     </div>
 
     <div id="skills" class="tab-pane">
-      <h2>Compétences & Publications</h2>
+      <h2>Expertises & Langues</h2>
       
       <div class="card">
-        <h3 style="color:var(--accent); margin-bottom:15px;">Maîtrise des Langues</h3>
-        <div class="lang-grid">
-          <div class="lang-badge">Français<span class="lang-level">Maternel</span></div>
-          <div class="lang-badge">Anglais<span class="lang-level">C2 (Bilingue)</span></div>
-          <div class="lang-badge">Polonais<span class="lang-level">B1-B2</span></div>
-          <div class="lang-badge">Espagnol<span class="lang-level">B1</span></div>
+        <h3>Compétences Techniques</h3>
+        
+        <div class="skill-bar-container">
+          <div class="skill-label"><span>Cartographie (QGIS / ArcGIS)</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill-bar-container">
+          <div class="skill-label"><span>Analyse Géopolitique & Veille OSINT</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-bar-container">
+          <div class="skill-label"><span>Adobe Illustrator (Design Carto)</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="skill-bar-container">
+          <div class="skill-label"><span>Suite Office</span><span>95%</span></div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
         </div>
       </div>
 
       <div class="card">
-        <h3 style="color:var(--accent); margin-bottom:15px;">Expertises Techniques</h3>
-        <ul>
-          <li>Analyse géopolitique et Veille OSINT.</li>
-          <li>Cartographie : <strong>QGIS</strong> et <strong>Adobe Illustrator</strong>.</li>
-          <li>Systèmes d'Information Géographique : <strong>ArcGIS</strong>.</li>
-          <li>Maîtrise experte de la Suite Office.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="color:var(--accent); margin-bottom:15px;">Publications & Engagements</h3>
-        <ul>
-          <li><strong>Diploweb.com</strong> : Rédaction d'un article de géopolitique (dir. P. Verluise, 2025).</li>
-          <li><strong>Université de Varsovie</strong> : Présentation lors du séminaire de l'Office Français (2025).</li>
-          <li><strong>666 Albums Metal</strong> : Rédaction d'une chronique pour l'encyclopédie (Nouveau Monde).</li>
-        </ul>
+        <h3>Langues</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px;">
+          <div style="background:var(--bg-dark); padding:15px; border-radius:8px; text-align:center; border:1px solid var(--border);">
+            <strong>Français</strong><br><span style="color:var(--accent); font-size:12px;">Maternel</span>
+          </div>
+          <div style="background:var(--bg-dark); padding:15px; border-radius:8px; text-align:center; border:1px solid var(--border);">
+            <strong>Anglais</strong><br><span style="color:var(--accent); font-size:12px;">C2 (Bilingue)</span>
+          </div>
+          <div style="background:var(--bg-dark); padding:15px; border-radius:8px; text-align:center; border:1px solid var(--border);">
+            <strong>Polonais</strong><br><span style="color:var(--accent); font-size:12px;">B1-B2</span>
+          </div>
+          <div style="background:var(--bg-dark); padding:15px; border-radius:8px; text-align:center; border:1px solid var(--border);">
+            <strong>Espagnol</strong><br><span style="color:var(--accent); font-size:12px;">B1</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="formation" class="tab-pane">
       <h2>Cursus Académique</h2>
       <div class="card">
-        <div class="exp-header">
-          <span class="exp-title">Master de Géopolitique</span>
-          <span class="exp-date">2024 — 2026</span>
-        </div>
-        <span class="exp-org">IFG - Université Paris-VIII</span>
-        <p style="font-size:14px; color:var(--text-dim);">Spécialisation : Nouveaux Acteurs de la Compétition Stratégique.</p>
+        <p><strong>2024-2026 :</strong> Master Géopolitique (IFG - Paris-VIII). Nouveaux Acteurs.</p>
       </div>
       <div class="card">
-        <div class="exp-header">
-          <span class="exp-title">Double Licence Histoire / Géographie</span>
-          <span class="exp-date">2021 — 2024</span>
-        </div>
-        <span class="exp-org">Université Jean Moulin Lyon-III</span>
-        <p style="font-size:14px; color:var(--text-dim);">Mention Bien pour les deux licences.</p>
+        <p><strong>2021-2024 :</strong> Double licence Histoire / Géographie (Lyon-III). Mention Bien.</p>
       </div>
     </div>
 
@@ -273,21 +273,11 @@
 
   <script>
     function switchTab(tabId) {
-      // Masquer tous les onglets
       document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-      // Désactiver tous les boutons
       document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-
-      // Afficher l'onglet cible
-      const target = document.getElementById(tabId);
-      if(target) target.classList.add('active');
-      
-      // Activer le bouton correspondant
-      const activeBtn = Array.from(document.querySelectorAll('.nav-btn'))
-                             .find(b => b.getAttribute('onclick').includes(tabId));
-      if (activeBtn) activeBtn.classList.add('active');
-
-      // Remonter en haut de la page lors du changement
+      document.getElementById(tabId).classList.add('active');
+      const btn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if(btn) btn.classList.add('active');
       window.scrollTo(0, 0);
     }
   </script>
