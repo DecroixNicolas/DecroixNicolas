@@ -104,11 +104,11 @@
         <h1 style="font-size: 42px; color: var(--accent); margin-bottom: 10px;">Nicolas Decroix</h1>
         <p style="font-size: 22px; color: var(--dim); margin-bottom: 35px; font-weight: 300;">Analyste en Géopolitique & Nouveaux Acteurs</p>
         <p style="text-align: justify; max-width: 750px; margin: 0 auto; font-size: 18px; color: var(--text);">
-          Étudiant en Master à l'Institut Français de Géopolitique, je me spécialise dans la compétition stratégique et la sécurité de l'espace OTAN. Mon expertise porte sur la militarisation du Flanc Est et l'analyse de défense face aux nouveaux enjeux de puissance.
+          Étudiant en Master à l'Institut Français de Géopolitique, je me spécialise dans la sécurité de l'espace OTAN. Mon expertise porte sur la militarisation du Flanc Est, l'intégration de l'Europe du nord dans l'alliance et la sécurité arctique.
         </p>
         <div style="margin-top: 45px;">
           <a href="mailto:decroix.nicolasfrancois@gmail.com" class="action-btn">📩 Contactez-moi</a>
-          <a href="https://www.linkedin.com/in/nicolas-decroix-805218222/" target="_blank" class="action-btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent); margin-left: 10px;">🔗 LinkedIn</a>
+          <a href="[https://www.linkedin.com/in/nicolas-decroix-805218222/](https://www.linkedin.com/in/nicolas-decroix-816a10263/)" target="_blank" class="action-btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent); margin-left: 10px;">🔗 LinkedIn</a>
         </div>
       </div>
     </section>
@@ -117,13 +117,13 @@
       <h2>Cursus Académique</h2>
       <div class="card">
         <span class="date">2024 — 2026</span>
-        <h3>Master de Géopolitique - Spécialisation Nouveaux Acteurs</h3>
+        <h3>Master de Géopolitique - Spécialisation Nouveaux Acteurs de la Compétition Stratégique</h3>
         <p>Institut Français de Géopolitique (IFG) - Université Paris-VIII</p>
       </div>
       <div class="card">
         <span class="date">2021 — 2024</span>
         <h3>Double Licence Histoire & Géographie</h3>
-        <p>Université Jean Moulin Lyon-III | <strong>Mention Bien</strong></p>
+        <p>Université Jean Moulin Lyon-III | <strong>Mention Bien aux deux licences</strong></p>
       </div>
       <div class="card">
         <span class="date">2020 — 2021</span>
@@ -188,9 +188,9 @@
       <h2 style="margin-top: 40px;">Engagements</h2>
       <div class="card">
         <ul style="list-style-type: '⚡ '; margin-left: 25px;">
-          <li><strong>Office Français (Varsovie) :</strong> Présentation d'ouvrage en séminaire de lecture (2025).</li>
-          <li><strong>Encyclopédie Musicale :</strong> Chronique d'album dans <em>"666 Albums Metal Essentiels"</em> (Éd. du Nouveau Monde, 2025).</li>
-          <li><strong>Association Géodote :</strong> Chargé des partenariats au sein de l'IFG (2025-2026).</li>
+          <li><strong>Office pour la Culture Française à l'Unversité de Varsovie :</strong> Présentation d'ouvrage en séminaire de lecture (2025).</li>
+          <li><strong>Encyclopédie Musicale :</strong> Chronique d'album dans <em>"666 Albums Metal Essentiels"</em>, sous la direction de Christophe Goffette (Éd. du Nouveau Monde, 2025).</li>
+          <li><strong>Association Géodote :</strong> Chargé des partenariats au sein de l'association étudiante (2025-2026).</li>
         </ul>
       </div>
     </section>
