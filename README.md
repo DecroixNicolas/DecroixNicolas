@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nicolas Decroix | Portfolio Analyste Géopolitique</title>
+  <title>Présentation | Portfolio</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -39,7 +39,7 @@
     }
     .nav-btn.active { background: var(--accent); color: var(--bg); }
 
-    main { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
+    main { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
     .tab-pane { display: none; animation: fadeIn 0.4s ease; }
     .tab-pane.active { display: block; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -52,17 +52,17 @@
     ul { margin-left: 20px; margin-bottom: 15px; }
     li { margin-bottom: 8px; font-size: 15px; color: var(--text); }
 
-    /* LAYOUT MÉMOIRE : Texte à gauche, Cartes à droite */
-    .memo-container { display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
-    .memo-text { flex: 1; min-width: 300px; }
-    .memo-side-grid { flex: 1; min-width: 300px; display: grid; grid-template-columns: 1fr; gap: 15px; }
+    /* LAYOUT MÉMOIRE */
+    .memo-flex { display: flex; gap: 30px; flex-wrap: wrap; }
+    .memo-left { flex: 1.2; min-width: 320px; }
+    .memo-right { flex: 0.8; min-width: 300px; display: flex; flex-direction: column; gap: 15px; }
 
-    .pdf-box { width: 100%; height: 500px; border: 1px solid var(--border); border-radius: 8px; margin-top: 15px; background: #000; }
+    .pdf-box { width: 100%; height: 550px; border: 1px solid var(--border); border-radius: 8px; margin-top: 15px; background: #000; }
     
     .img-item { position: relative; border-radius: 10px; overflow: hidden; border: 2px solid var(--border); transition: 0.3s; display: block; }
     .img-item:hover { border-color: var(--accent); transform: scale(1.02); }
-    .img-item img { width: 100%; height: 180px; object-fit: cover; display: block; background: #0f172a; }
-    .img-tag { position: absolute; bottom: 0; width: 100%; background: rgba(15, 23, 42, 0.9); color: white; font-size: 11px; padding: 5px; text-align: center; font-weight: bold; }
+    .img-item img { width: 100%; height: 200px; object-fit: cover; display: block; background: #0f172a; }
+    .img-tag { position: absolute; bottom: 0; width: 100%; background: rgba(15, 23, 42, 0.9); color: white; font-size: 11px; padding: 6px; text-align: center; font-weight: bold; }
 
     .action-btn {
       display: inline-block; padding: 10px 20px; background: var(--accent); color: var(--bg);
@@ -79,9 +79,10 @@
 
     footer { text-align: center; padding: 60px 40px; color: var(--dim); font-size: 14px; border-top: 1px solid var(--border); }
 
-    @media (max-width: 768px) {
-      .memo-container { flex-direction: column; }
-      .memo-side-grid { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 850px) {
+      .memo-flex { flex-direction: column; }
+      .memo-right { flex-direction: row; flex-wrap: wrap; }
+      .memo-right .img-item { flex: 1; min-width: 250px; }
     }
   </style>
 </head>
@@ -147,7 +148,7 @@
         <p>CNRS - Programme 13-Novembre & Équipex MATRICE</p>
         <ul>
           <li>Transcription de témoignages de victimes d'attentats et de déportés.</li>
-          <li>Respect du vade-mecum de transcription scientifique.</li>
+          <li>Respect du vade-mecum de transcription scientifique et des clauses de confidentialité.</li>
         </ul>
       </div>
     </section>
@@ -155,30 +156,28 @@
     <section id="recherche" class="tab-pane">
       <h2>Travaux de Recherche</h2>
       <div class="card">
-        <div class="memo-container">
-          <div class="memo-text">
-            <h3>Mémoire de Master 1 (Note : 17/20)</h3>
-            <p style="margin-bottom: 10px;"><em>"La militarisation de la frontière russo-polonaise avec Kaliningrad"</em></p>
-            <p style="font-size: 14px; text-align: justify; color: var(--dim);">
-              Ce travail analyse les dynamiques de remilitarisation du flanc est européen. Dans le cadre de ce mémoire, un travail de terrain a été mené à l'Université d'Olsztyn (Pologne), permettant des échanges directs avec les chercheurs et autorités locales sur la perception de la menace sécuritaire.
+        <div class="memo-flex">
+          <div class="memo-left">
+            <h3>Mémoire de Master 1 (17/20)</h3>
+            <p style="margin-bottom: 12px;"><em>"La militarisation de la frontière russo-polonaise avec Kaliningrad"</em></p>
+            <p style="font-size: 14px; text-align: justify; color: var(--dim); margin-bottom: 15px;">
+              Ce travail documente une visite scientifique à l'Université d'Olsztyn (Pologne), détaillant des échanges directs avec les chercheurs locaux et les autorités sur la sécurité frontalière.
             </p>
-            
-            <a href="http://wns.uwm.edu.pl/inp/wizyta-naukowa-studenta-z-francji" target="_blank" class="action-btn" style="padding: 8px 15px; font-size: 12px;">Voir l'article de terrain ↗</a>
-            
+            <a href="http://wns.uwm.edu.pl/inp/wizyta-naukowa-studenta-z-francji" target="_blank" class="action-btn" style="padding: 8px 15px; font-size: 12px;">Article de terrain ↗</a>
             <iframe class="pdf-box" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
           </div>
 
-          <div class="memo-side-grid">
+          <div class="memo-right">
             <div class="img-item">
-              <img src="carte-nationale.jpg" alt="Analyse Nationale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte+Nationale.jpg'">
+              <img src="carte-nationale.jpg" alt="Carte Nationale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=carte-nationale.jpg'">
               <div class="img-tag">Échelle Nationale</div>
             </div>
             <div class="img-item">
-              <img src="Carte-Région.png" alt="Analyse Régionale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Région.png'">
+              <img src="Carte-Région.png" alt="Carte Région" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Région.png'">
               <div class="img-tag">Échelle Régionale</div>
             </div>
             <div class="img-item">
-              <img src="Carte-Varmie.png" alt="Analyse Locale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Varmie.png'">
+              <img src="Carte-Varmie.png" alt="Carte Locale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Varmie.png'">
               <div class="img-tag">Échelle Locale (Varmie)</div>
             </div>
           </div>
@@ -204,7 +203,7 @@
         <div class="skill-box"><strong>Bureautique</strong>Suite Office</div>
       </div>
 
-      <h2 style="margin-top: 40px;">Langues (Niveaux Européens)</h2>
+      <h2 style="margin-top: 40px;">Maîtrise des Langues</h2>
       <div class="card">
         <div class="lang-row"><span>Français</span><span style="color:var(--accent); font-weight:bold;">C2+</span></div>
         <div class="lang-row"><span>Anglais</span><span style="color:var(--accent); font-weight:bold;">C2</span></div>
@@ -229,20 +228,34 @@
 
   <script>
     function switchTab(id) {
+      // 1. Gestion des panneaux
       document.querySelectorAll('.tab-pane').forEach(p => {
         p.classList.remove('active');
         p.style.display = 'none';
       });
+      
+      // 2. Gestion des boutons
       document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
       
+      // 3. Activation
       const target = document.getElementById(id);
       if(target) {
         target.style.display = 'block';
         setTimeout(() => target.classList.add('active'), 10);
+        
+        // --- MISE À JOUR DE L'ONGLET NAVIGATEUR ---
+        const titles = {
+          'home': 'Présentation',
+          'parcours': 'Parcours',
+          'recherche': 'Recherche',
+          'skills': 'Compétences'
+        };
+        document.title = titles[id] + " | Portfolio";
       }
       
       const btn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(id));
       if(btn) btn.classList.add('active');
+
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     window.onload = () => switchTab('home');
