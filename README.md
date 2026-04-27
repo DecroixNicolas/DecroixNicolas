@@ -119,35 +119,7 @@
     </section>
 
     <section id="parcours" class="tab-pane">
-      <h2>Cursus Académique</h2>
-      <div class="card">
-        <span class="date">2024 — 2026</span>
-        <h3>Master de Géopolitique - Spécialisation Nouveaux Acteurs</h3>
-        <p>Institut Français de Géopolitique (IFG) - Université Paris-VIII</p>
-      </div>
-      <div class="card">
-        <span class="date">2021 — 2024</span>
-        <h3>Double Licence Histoire & Géographie</h3>
-        <p>Université Jean Moulin Lyon-III | <strong>Mention Bien aux deux licences</strong></p>
-      </div>
-      <div class="card">
-        <span class="date">2020 — 2021</span>
-        <h3>Baccalauréat Général</h3>
-        <p>Institution des Chartreux | <strong>Mention Très Bien</strong> (Maths & HGGSP)</p>
-      </div>
-
-      <h2 style="margin-top: 40px;">Expériences Professionnelles</h2>
-      <div class="card">
-        <span class="date">Juillet — Août 2022</span>
-        <h3>Stagiaire au service Urbanisme</h3>
-        <p>Mairie de Caluire-et-Cuire, France</p>
-        <ul>
-          <li>Étude de faisabilité pour l'implantation de modes de production d'énergie solaire à l'échelle communale.</li>
-          <li>Rédaction de notes de synthèse et de rapports d'analyse à destination de Monsieur le Maire.</li>
-          <li>Utilisation opérationnelle des systèmes d'information géographique (ArcGIS, QGIS).</li>
-        </ul>
-      </div>
-
+      <h2>Expériences Professionnelles</h2>
       <div class="card">
         <span class="date">Nov. 2024 — Présent</span>
         <h3>Student Assistant to the Secretary General</h3>
@@ -168,17 +140,56 @@
           <li>Respect du vade-mecum de transcription scientifique et des clauses de confidentialité.</li>
         </ul>
       </div>
+
+      <div class="card">
+        <span class="date">Juillet — Août 2022</span>
+        <h3>Stagiaire au service Urbanisme</h3>
+        <p>Mairie de Caluire-et-Cuire, France</p>
+        <ul>
+          <li>Étude de faisabilité pour l'implantation de modes de production d'énergie solaire à l'échelle communale.</li>
+          <li>Rédaction de notes de synthèse et de rapports d'analyse à destination de Monsieur le Maire.</li>
+          <li>Utilisation opérationnelle des systèmes d'information géographique (ArcGIS, QGIS).</li>
+        </ul>
+      </div>
+
+      <h2 style="margin-top: 40px;">Cursus Académique</h2>
+      <div class="card">
+        <span class="date">2024 — 2026</span>
+        <h3>Master de Géopolitique - Spécialisation Nouveaux Acteurs</h3>
+        <p>Institut Français de Géopolitique (IFG) - Université Paris-VIII</p>
+      </div>
+      <div class="card">
+        <span class="date">2021 — 2024</span>
+        <h3>Double Licence Histoire & Géographie</h3>
+        <p>Université Jean Moulin Lyon-III | <strong>Mention Bien aux deux licences</strong></p>
+      </div>
+      <div class="card">
+        <span class="date">2020 — 2021</span>
+        <h3>Baccalauréat Général</h3>
+        <p>Institution des Chartreux | <strong>Mention Très Bien</strong> (Maths & HGGSP)</p>
+      </div>
     </section>
 
     <section id="recherche" class="tab-pane">
-      <h2>Travaux de Recherche</h2>
+      <h2>Recherches en cours</h2>
+      <div class="card" style="border-left: 5px solid var(--accent);">
+        <span class="date">2025 — 2026</span>
+        <h3>Mémoire de Master 2 (En préparation)</h3>
+        <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">"La sécuritisation de l'Arctique finlandais : d'un espace périphérique à un espace stratégique"</p>
+        <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">"Terrain de recherche : mai-juin 2026"</p>
+        <p style="font-size: 15px; color: var(--dim); text-align: justify;">
+          Analyse de l'évolution des infrastructures militaires et de la posture de défense finlandaise dans l'Arctique suite à l'adhésion à l'OTAN. 
+        </p>
+      </div>
+
+      <h2 style="margin-top: 40px;">Travaux de Recherche Terminés</h2>
       <div class="card">
         <div class="memo-flex">
           <div class="memo-left">
             <h3>Mémoire de Master 1 (17/20)</h3>
-            <p style="margin-bottom: 12px;"><em>"La militarisation de la frontière russo-polonaise avec Kaliningrad"</em></p>
+            <p style="margin-bottom: 12px;"><em>"La Pologne et l'exclave de Kaliningrad : Projet Bouclier Oriental et nouvelles réalités frontalières dans le contexte de la guerre en Ukraine"</em></p>
             <p style="font-size: 14px; text-align: justify; color: var(--dim); margin-bottom: 15px;">
-              Ce travail documente une visite scientifique à l'Université d'Olsztyn (Pologne), détaillant des échanges directs avec les chercheurs locaux et les autorités sur la sécurité frontalière.
+              Ce travail documente une visite scientifique à l'Université d'Olsztyn (Pologne), et détaille mes échanges directs avec les chercheurs locaux et les autorités sur la sécurité frontalière.
             </p>
             <a href="http://wns.uwm.edu.pl/inp/wizyta-naukowa-studenta-z-francji" target="_blank" class="action-btn" style="padding: 8px 15px; font-size: 12px;">Article de terrain ↗</a>
             <iframe class="pdf-box" src="https://drive.google.com/file/d/1biwjkTJpX5jVcjh5E2IlDCJIIUYt-F4T/preview"></iframe>
@@ -207,7 +218,7 @@
           <span class="engag-icon">🏛️</span>
           <h3>Université de Varsovie</h3>
           <p style="font-size: 14px; color: var(--dim);">Office pour la Culture Française</p>
-          <p style="font-size: 15px; margin-top: 10px;">Présentation d'ouvrage lors de séminaires de lecture (2025).</p>
+          <p style="font-size: 15px; margin-top: 10px;">Participation et présentation d'ouvrages lors de séminaires de lecture (2025).</p>
         </div>
         
         <div class="engag-card">
