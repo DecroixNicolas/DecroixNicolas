@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Présentation | Portfolio</title>
+  <title>Portfolio | Analyste</title>
+  
   <style>
     :root {
       --bg: #0f172a;
@@ -52,7 +53,7 @@
     ul { margin-left: 20px; margin-bottom: 15px; }
     li { margin-bottom: 8px; font-size: 15px; color: var(--text); }
 
-    /* LAYOUT MÉMOIRE */
+    /* LAYOUT MÉMOIRE RÉORGANISÉ */
     .memo-flex { display: flex; gap: 30px; flex-wrap: wrap; }
     .memo-left { flex: 1.2; min-width: 320px; }
     .memo-right { flex: 0.8; min-width: 300px; display: flex; flex-direction: column; gap: 15px; }
@@ -169,15 +170,15 @@
 
           <div class="memo-right">
             <div class="img-item">
-              <img src="carte-nationale.jpg" alt="Carte Nationale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=carte-nationale.jpg'">
+              <img src="carte-nationale.jpg" alt="Échelle Nationale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=carte-nationale.jpg'">
               <div class="img-tag">Échelle Nationale</div>
             </div>
             <div class="img-item">
-              <img src="Carte-Région.png" alt="Carte Région" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Région.png'">
+              <img src="Carte-Région.png" alt="Échelle Régionale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Région.png'">
               <div class="img-tag">Échelle Régionale</div>
             </div>
             <div class="img-item">
-              <img src="Carte-Varmie.png" alt="Carte Locale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Varmie.png'">
+              <img src="Carte-Varmie.png" alt="Échelle Locale" onerror="this.src='https://via.placeholder.com/500x320/1e293b/38bdf8?text=Carte-Varmie.png'">
               <div class="img-tag">Échelle Locale (Varmie)</div>
             </div>
           </div>
@@ -227,23 +228,23 @@
   </footer>
 
   <script>
+    // Force le titre dès le début pour éviter d'afficher le nom du fichier
+    document.title = "Présentation | Portfolio";
+
     function switchTab(id) {
-      // 1. Gestion des panneaux
       document.querySelectorAll('.tab-pane').forEach(p => {
         p.classList.remove('active');
         p.style.display = 'none';
       });
       
-      // 2. Gestion des boutons
       document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
       
-      // 3. Activation
       const target = document.getElementById(id);
       if(target) {
         target.style.display = 'block';
         setTimeout(() => target.classList.add('active'), 10);
         
-        // --- MISE À JOUR DE L'ONGLET NAVIGATEUR ---
+        // Mise à jour dynamique de l'onglet navigateur
         const titles = {
           'home': 'Présentation',
           'parcours': 'Parcours',
@@ -258,6 +259,8 @@
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    
+    // Initialisation
     window.onload = () => switchTab('home');
   </script>
 </body>
