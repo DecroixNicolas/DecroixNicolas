@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Analyste</title>
-  
+  <title>Présentation | Portfolio</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -45,7 +44,7 @@
     .tab-pane.active { display: block; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 25px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 25px; position: relative; }
     h2 { font-size: 24px; margin-bottom: 20px; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 15px; text-transform: uppercase; }
     h3 { font-size: 19px; color: var(--text); margin-bottom: 5px; }
     .date { font-size: 13px; color: var(--accent); font-weight: bold; display: block; margin-bottom: 12px; }
@@ -53,7 +52,7 @@
     ul { margin-left: 20px; margin-bottom: 15px; }
     li { margin-bottom: 8px; font-size: 15px; color: var(--text); }
 
-    /* LAYOUT MÉMOIRE RÉORGANISÉ */
+    /* LAYOUT MÉMOIRE */
     .memo-flex { display: flex; gap: 30px; flex-wrap: wrap; }
     .memo-left { flex: 1.2; min-width: 320px; }
     .memo-right { flex: 0.8; min-width: 300px; display: flex; flex-direction: column; gap: 15px; }
@@ -64,6 +63,12 @@
     .img-item:hover { border-color: var(--accent); transform: scale(1.02); }
     .img-item img { width: 100%; height: 200px; object-fit: cover; display: block; background: #0f172a; }
     .img-tag { position: absolute; bottom: 0; width: 100%; background: rgba(15, 23, 42, 0.9); color: white; font-size: 11px; padding: 6px; text-align: center; font-weight: bold; }
+
+    /* BLOCS ENGAGEMENTS */
+    .engagement-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+    .engag-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: 0.3s; border-top: 3px solid var(--accent); }
+    .engag-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .engag-icon { font-size: 24px; margin-bottom: 10px; display: block; }
 
     .action-btn {
       display: inline-block; padding: 10px 20px; background: var(--accent); color: var(--bg);
@@ -108,7 +113,7 @@
         </p>
         <div style="margin-top: 45px;">
           <a href="mailto:decroix.nicolasfrancois@gmail.com" class="action-btn">📩 Contactez-moi</a>
-          <a href="[https://www.linkedin.com/in/nicolas-decroix-805218222/](https://www.linkedin.com/in/nicolas-decroix-816a10263/)" target="_blank" class="action-btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent); margin-left: 10px;">🔗 LinkedIn</a>
+          <a href="https://www.linkedin.com/in/nicolas-decroix-816a10263/" target="_blank" class="action-btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent); margin-left: 10px;">🔗 LinkedIn</a>
         </div>
       </div>
     </section>
@@ -117,7 +122,7 @@
       <h2>Cursus Académique</h2>
       <div class="card">
         <span class="date">2024 — 2026</span>
-        <h3>Master de Géopolitique - Spécialisation Nouveaux Acteurs de la Compétition Stratégique</h3>
+        <h3>Master de Géopolitique - Spécialisation Nouveaux Acteurs</h3>
         <p>Institut Français de Géopolitique (IFG) - Université Paris-VIII</p>
       </div>
       <div class="card">
@@ -132,6 +137,17 @@
       </div>
 
       <h2 style="margin-top: 40px;">Expériences Professionnelles</h2>
+      <div class="card">
+        <span class="date">Juillet — Août 2022</span>
+        <h3>Stagiaire au service Urbanisme</h3>
+        <p>Mairie de Caluire-et-Cuire, France</p>
+        <ul>
+          <li>Étude de faisabilité pour l'implantation de modes de production d'énergie solaire à l'échelle communale.</li>
+          <li>Rédaction de notes de synthèse et de rapports d'analyse à destination de Monsieur le Maire.</li>
+          <li>Utilisation opérationnelle des systèmes d'information géographique (ArcGIS, QGIS).</li>
+        </ul>
+      </div>
+
       <div class="card">
         <span class="date">Nov. 2024 — Présent</span>
         <h3>Student Assistant to the Secretary General</h3>
@@ -186,12 +202,27 @@
       </div>
 
       <h2 style="margin-top: 40px;">Engagements</h2>
-      <div class="card">
-        <ul style="list-style-type: '⚡ '; margin-left: 25px;">
-          <li><strong>Office pour la Culture Française à l'Unversité de Varsovie :</strong> Présentation d'ouvrage en séminaire de lecture (2025).</li>
-          <li><strong>Encyclopédie Musicale :</strong> Chronique d'album dans <em>"666 Albums Metal Essentiels"</em>, sous la direction de Christophe Goffette (Éd. du Nouveau Monde, 2025).</li>
-          <li><strong>Association Géodote :</strong> Chargé des partenariats au sein de l'association étudiante (2025-2026).</li>
-        </ul>
+      <div class="engagement-grid">
+        <div class="engag-card">
+          <span class="engag-icon">🏛️</span>
+          <h3>Université de Varsovie</h3>
+          <p style="font-size: 14px; color: var(--dim);">Office pour la Culture Française</p>
+          <p style="font-size: 15px; margin-top: 10px;">Présentation d'ouvrage lors de séminaires de lecture (2025).</p>
+        </div>
+        
+        <div class="engag-card">
+          <span class="engag-icon">📚</span>
+          <h3>Encyclopédie Musicale</h3>
+          <p style="font-size: 14px; color: var(--dim);">Éditions du Nouveau Monde</p>
+          <p style="font-size: 15px; margin-top: 10px;">Rédaction d'une chronique d'album dans l'ouvrage <em>"666 Albums Metal Essentiels"</em>.</p>
+        </div>
+
+        <div class="engag-card">
+          <span class="engag-icon">🤝</span>
+          <h3>Association Géodote</h3>
+          <p style="font-size: 14px; color: var(--dim);">Institut Français de Géopolitique</p>
+          <p style="font-size: 15px; margin-top: 10px;">Chargé des partenariats et du développement des relations extérieures (2025-2026).</p>
+        </div>
       </div>
     </section>
 
@@ -228,7 +259,6 @@
   </footer>
 
   <script>
-    // Force le titre dès le début pour éviter d'afficher le nom du fichier
     document.title = "Présentation | Portfolio";
 
     function switchTab(id) {
@@ -236,15 +266,11 @@
         p.classList.remove('active');
         p.style.display = 'none';
       });
-      
       document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      
       const target = document.getElementById(id);
       if(target) {
         target.style.display = 'block';
         setTimeout(() => target.classList.add('active'), 10);
-        
-        // Mise à jour dynamique de l'onglet navigateur
         const titles = {
           'home': 'Présentation',
           'parcours': 'Parcours',
@@ -253,14 +279,10 @@
         };
         document.title = titles[id] + " | Portfolio";
       }
-      
       const btn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(id));
       if(btn) btn.classList.add('active');
-
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    
-    // Initialisation
     window.onload = () => switchTab('home');
   </script>
 </body>
