@@ -102,7 +102,7 @@
     <section id="home" class="tab-pane active">
       <div class="card" style="text-align: center; padding: 60px 30px;">
         <h1 style="font-size: 42px; color: var(--accent); margin-bottom: 10px;">Nicolas Decroix</h1>
-        <p style="font-size: 22px; color: var(--dim); margin-bottom: 35px; font-weight: 300;">Analyste en Géopolitique & Nouveaux Acteurs</p>
+        <p style="font-size: 22px; color: var(--dim); margin-bottom: 35px; font-weight: 300;">Analyse Géopolitique spécialisé Sécurité et Défense </p>
         <p style="text-align: justify; max-width: 750px; margin: 0 auto; font-size: 18px; color: var(--text);">
           Étudiant en Master à l'Institut Français de Géopolitique, je me spécialise dans la sécurité de l'espace OTAN. Mon expertise porte sur la militarisation du Flanc Est, l'intégration de l'Europe du nord dans l'alliance et la sécurité arctique.
         </p>
