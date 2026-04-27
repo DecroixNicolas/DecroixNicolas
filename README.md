@@ -206,7 +206,7 @@
 
       <h2 style="margin-top: 40px;">Maîtrise des Langues</h2>
       <div class="card">
-        <div class="lang-row"><span>Français</span><span style="color:var(--accent); font-weight:bold;">C2+</span></div>
+        <div class="lang-row"><span>Français</span><span style="color:var(--accent); font-weight:bold;">Langue maternelle</span></div>
         <div class="lang-row"><span>Anglais</span><span style="color:var(--accent); font-weight:bold;">C2</span></div>
         <div class="lang-row"><span>Polonais</span><span style="color:var(--accent); font-weight:bold;">B1-B2</span></div>
         <div class="lang-row" style="border:none;"><span>Espagnol</span><span style="color:var(--accent); font-weight:bold;">B1</span></div>
